@@ -1,0 +1,73 @@
+<!-- Coding By CodingNepal - codingnepalweb.com -->
+
+<body>
+
+  
+  <section class="container forms">
+      <div class="form login">
+          <div class="form-content">
+            <div class="contenedor-logo">
+              <img
+                style="
+                  width: 10rem;
+                  display: block;
+                  margin-left: auto;
+                  margin-right: auto;
+                  opacity: 0.6;
+                "
+                src="../assets/logo_app.png"
+                alt="logo"
+              />
+            </div>
+
+              <div class="field input-field">
+                <input type="email" placeholder="Mail" class="input" name="mail" id="mail">
+
+            </div>
+
+            <div class="field input-field">
+                <input type="password" placeholder="Contraseña" style="color: white" class="password" name="contraseña" id="contraseña">
+                <i class='bx bx-hide eye-icon'></i>
+            </div>
+            
+
+                  <div class="field button-field">
+                      <button (click)="iniciarSesion()">Iniciar sesión</button>
+                  </div>
+
+
+          </div>
+
+          <div class="line"></div>
+
+          <div class="media-options">
+            <div class="field button-field">
+              <img style="width:50%"src="../assets/administrador.png" alt="splash_screen" (click)="autoCompletar('admin@admin.com', '111111')">
+              <p style="font-family: monospace; font-weight: bold;">administrador</p>
+          </div>
+              <div class="field button-field">
+                <img style="width:50%" src="../assets/usuario.png" alt="splash_screen" (click)="autoCompletar('admin@admin.com', '111111')">
+                <p style="font-family: monospace; font-weight: bold;">Usuario</p>
+
+            </div>
+            <div class="field button-field">
+              <img style="width:50%" src="../assets/anonimo.png" alt="splash_screen" (click)="autoCompletar('admin@admin.com', '111111')">
+              <p style="font-family: monospace; font-weight: bold;">administrador</p>
+
+          </div>
+          </div>
+
+          <div class="media-options">
+
+          </div>
+
+      </div>
+
+
+      ////////////
+
+      <!-- HTML !-->
+
+
+
+     

@@ -1,0 +1,93 @@
+/*ion-button{
+    height: 43vh;
+    padding: 0px 8px 0px 8px;
+    border-color: white;
+    border-width: solid 1px;
+
+}
+.icon-back{
+    width: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+}*/
+
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+  }
+  header {
+    background-color: #1e1e1f;
+    color: white;
+    padding: 12px 0;  
+  }
+  .container {
+    width: 90%;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .logo {
+    font-size: 24px;
+    font-weight: bold;
+  }
+  nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+  }
+  nav ul li {
+    margin-left: 20px;
+  }
+  nav ul li a {
+    color: white;
+    text-decoration: none;
+  }
+  nav ul li a:hover {
+    text-decoration: underline;
+  }
+  
+  .iconos {
+    display: flex;
+    gap: 10px;
+  }
+  
+  .icon {
+    width: 35px;  /* Ajusta el tamaño aquí para hacerlo más pequeño */
+    height: 35px;
+    cursor: pointer;
+  }
+  .content {
+    padding: 20px;
+  }
+  .button {
+    width: 100%;
+    padding: 70px;
+    margin: 10px 0;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+    border: none;
+    cursor: pointer;
+  }
+  .button-success {
+    background-color: #28a745;
+    color: white;
+    border-radius: 12px;
+  }
+  .button-secondary {
+    background-color: #db830f;
+    color: white;
+    border-radius: 12px;
+  }
+  .button img {
+    display: block;
+    margin: 0 auto 10px;
+    width: 100px;  /* Ajusta el tamaño del icono aquí si es necesario */
+    height: 100px;
+  }
+  body{
+    background: #2c2c2c;
+  }

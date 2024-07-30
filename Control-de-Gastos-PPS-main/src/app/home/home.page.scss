@@ -1,0 +1,62 @@
+ion-content {
+  --background: rgb(114, 114, 114);
+
+}
+
+
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  color: #000;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  // text-shadow: 1px 1px 2px #000;
+}
+
+ion-item {
+  color: #ffffff;
+  --background: rgba(8, 8, 8, 0.582);
+  font-family: sans-serif;
+  border-radius: 15px;
+  border: 2px solid white;
+
+}
+
+.no-border-button {
+  border: none; /* Elimina el borde */
+  box-shadow: none; /* Elimina las sombras del botón */
+  background-color: #ff4d4d; /* El color de fondo que ya estaba definido como bg-red-600 */
+}
+
+.no-border-button:hover {
+  background-color: #4d4dff; /* Color de fondo al pasar el ratón, ya estaba definido como hover:bg-indigo-700 */
+}
+
+.no-border-button:focus {
+  outline: none; /* Elimina el contorno al enfocar */
+  box-shadow: none; /* Elimina la sombra del enfoque */
+}
+
+.custom-input .ion-input {
+  border: none; /* Elimina el borde del input */
+  box-shadow: none; /* Elimina la sombra del input */
+}
+
+.custom-input {
+  border: none; /* Elimina el borde del item */
+  --highlight-color-focused: transparent; /* Elimina el color de foco del item */
+}
+
+.custom-input .ion-label {
+  color: #fff; /* Color del label si es necesario ajustar */
+}
+
+/* Opcional: para eliminar el subrayado en el estado enfocado */
+.custom-input .ion-item:hover,
+.custom-input .ion-item:focus-within {
+  border-color: transparent;
+  box-shadow: none;
+}

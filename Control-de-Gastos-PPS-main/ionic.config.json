@@ -1,0 +1,7 @@
+{
+  "name": "TablaDeIdiomas",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

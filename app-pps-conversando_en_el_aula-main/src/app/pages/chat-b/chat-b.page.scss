@@ -1,0 +1,84 @@
+.icon-img{
+    background-color: #f8f8f8;
+}
+
+.msjBox{
+    background-color: aliceblue!important;
+    height: auto;
+    width: 80%;
+    color: black;
+    border-radius: 20px 20px 20px 20px;
+    padding-left: 15px!important;
+    padding-right: 15px!important;
+    font-size: 25px!important;
+
+
+}
+
+.icon-back{
+    width: 50px;
+    padding-right: 5px;
+    padding-left: 5px;
+    background-color: rgba(218, 215, 215, 0.596);
+    border-radius: 15px;
+    
+}
+
+ion-buttons{
+    padding-right: 5px;
+}
+
+ion-content{
+    --background: #3ebcbb;
+}
+
+.msj-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.mensaje{
+    width: 75%;
+    border-radius: 15px;
+    display: flex;
+    flex-direction: column!important;
+    
+}
+
+.user-name{
+    font-size: 18px;
+    color: #ffffffd2;
+    font-weight: bold;
+}
+
+.user-text{
+    font-size: 25px;
+    color: rgb(0, 0, 0);
+ 
+}
+
+.user-date{
+    font-size: 11px;
+    text-align: end;
+    color: black;
+    font-weight: bold;
+}
+
+.send{
+    display: flex;
+    justify-content: flex-end!important;
+    ion-item{
+        --background: #fff6ce!important;
+          
+    }
+}
+
+.received{
+    display: flex;
+    justify-content: flex-start!important;
+    ion-item{
+        --background: #858585!important;  
+    }
+}

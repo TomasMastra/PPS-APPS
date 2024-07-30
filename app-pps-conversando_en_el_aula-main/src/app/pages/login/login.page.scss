@@ -1,0 +1,155 @@
+.contenedor-gral {
+    background: #333333;
+    min-height: 100vh;
+    font-weight: lighter;
+  }
+  
+  .contenedor-logo {
+    position: relative;
+    h1 {
+      color: #fff;
+      position: absolute;
+      top: 90%;
+      left: 22%;
+      margin: -25px 0 0 -25px;
+      z-index: 1000;
+      font-family: fantasy;
+    }
+  }
+
+
+.auth-form {
+    width: 100%;
+    text-align: center;
+    // padding: 20px;
+}
+
+.custom-input {
+    --border-color: #e0e0e0;
+    --border-radius: 15px;
+    --border-style: solid;
+    --border-width: 1px;
+    // margin: 20px 0;
+    
+    ion-label {
+        position: relative;
+        bottom: 2px;
+    }
+    
+    .eye-icon {
+        position: relative;
+        top: 13px;
+    }
+}
+
+.error{
+    // height: 25px;
+    width: 82%;
+    background-color: rgb(221, 94, 153);
+    border-radius: 10px;
+    border: 1px solid red;
+    height: auto;
+    div{
+        color: white;
+        margin-left: 5px;
+    }
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+ion-content{
+    --background: none;
+    background-color: #353535;
+    // background-image: url('../../../assets/bk/madera-bkg.jpg')!important;
+    // background-size: cover;
+}
+
+ion-fab-button ion-img{
+    background-color: #b4a056;
+}
+
+.slot{
+    margin: 8%;
+}
+
+.subslot{
+    margin-bottom: 30px;
+}
+.btnIngreso{
+    padding: 0;
+    margin: 0;
+    width: 80%;
+
+}
+
+.title{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #53535363;
+
+        ion-title{
+            // color: #234191;
+            // -webkit-text-stroke: 0.1px #fff;
+            font-size: 40px;
+            font-weight: 800;
+            font-family: 'Ribeye', cursive;
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.btn-img{
+    height: 70px; 
+    width: 70px;
+    margin: 10px;
+}
+.btn-ingresar{
+    --background: #dff1d6;
+}
+.btn{
+    margin: 5px;
+}
+
+@media (orientation: landscape) {
+    .aux{
+        padding: 16px;
+        margin: 0!important;
+    }
+    .btn{
+        margin: 0!important;
+    }
+    .btn-img{
+        height: 40px; 
+        width: 40px;
+    }
+}
+.send{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    ion-item{
+        width: 90%!important;
+
+    }
+}
+.received{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    ion-item{
+        width: 90%!important;
+
+    }
+}

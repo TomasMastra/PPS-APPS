@@ -1,0 +1,7 @@
+{
+  "name": "app-conversando-en-el-aula",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular-standalone"
+}

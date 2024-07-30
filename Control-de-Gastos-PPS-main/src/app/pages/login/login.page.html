@@ -1,0 +1,177 @@
+<ion-content>
+
+  <ion-header>
+    <ion-toolbar class="toolbar-container">
+      <ion-title class="toolbar-title upper">Control de Gastos</ion-title>
+    </ion-toolbar>  
+  </ion-header>
+  
+  <!-- <img src="../../../assets/icono-png.png" class="custom-image">
+-->
+  <div class="middle">
+
+    <div class="box">
+
+      <form #loginForm="ngForm">
+        <p
+        
+          style="
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+          "
+        >
+          Inicio de Sesión
+        </p>
+
+
+        <!-- INPUT EMAIL -->
+        <ion-item>
+          
+          <ion-label position="floating">Dirección de Correo</ion-label>
+          <ion-input
+            type="email"
+            placeholder="Dirección de Correo"
+            name="email"
+            #email="ngModel"
+            [(ngModel)]="login.email"
+            required
+            email
+            
+          ></ion-input>
+          <ion-icon
+            class="ion-align-self-center"
+            slot="end"
+            name="mail"
+          ></ion-icon>
+        </ion-item>
+        <div *ngIf="email.invalid && email.touched">
+          <ion-text color="danger text-center">
+            <h4
+              style="
+                padding-left: 20px;
+                margin-top: 10px;
+                font-size: 14px;
+                color: #f00;
+              "
+            >
+              Ingrese su Dirección de Correo
+            </h4>
+          </ion-text>
+        </div>
+
+        <!-- INPUT CONTRASEÑA -->
+        <ion-item>
+          <ion-label position="floating">Contraseña</ion-label>
+          <ion-input
+            [type]="type ? 'password' : 'text'"
+            placeholder="Contraseña"
+            name="password"
+            #password="ngModel"
+            [(ngModel)]="login.password"
+            required
+          ></ion-input>
+          <ion-icon
+            class="ion-align-self-center"
+            slot="end"
+            [name]="name ? 'eye-outline' : 'eye-off-outline'"
+            (click)="changeType()"
+          ></ion-icon>
+        </ion-item>
+        <div *ngIf="password.invalid && password.touched">
+          <ion-text color="danger text-center">
+            <h4
+              style="
+                padding-left: 20px;
+                margin-top: 10px;
+                font-size: 14px;
+                color: #f00;
+              "
+            >
+              Ingrese su Contraseña
+            </h4>
+          </ion-text>
+        </div>
+
+        <!-- BOTON INGRESAR -->
+        <div class="btn">
+          <ion-button (click)="loginUser()"
+            ><ion-icon
+              name="log-in-outline"
+              style="padding-right: 10px"
+            ></ion-icon
+            >INGRESAR</ion-button
+          >
+        </div>
+
+        <hr />
+
+        <p
+          style="
+            text-align: center;
+            margin-bottom: 1rem;
+            color: #fff;
+            border-radius: 12px;
+            background: rgba(0, 0, 0, 0.15);
+          "
+        >
+          Inicio Rápido
+        </p>
+
+
+
+        <div class="btn">
+          <ion-button
+            (click)="loadFastUser(1)"
+            style="
+              --background: rgb(255, 255, 255);
+              color: #000;
+            "
+            ><ion-icon
+              name="person-outline"
+              style="padding-right: 10px"
+            ></ion-icon
+            >ADMIN</ion-button
+          >
+        </div>
+
+        <div class="btn">
+          <ion-button
+            (click)="loadFastUser(2)"
+            style="
+              --background: rgb(255, 255, 255);
+              color: #000;
+            "
+            ><ion-icon
+              name="person-outline"
+              style="padding-right: 10px"
+            ></ion-icon
+            >INVITADO</ion-button
+          >
+        </div>
+
+        <div class="btn">
+          <ion-button
+            (click)="loadFastUser(3)"
+            style="
+              --background: rgb(255, 255, 255);
+              color: #000;
+            "
+            ><ion-icon
+              name="person-outline"
+              style="padding-right: 10px"
+            ></ion-icon
+            >TESTER</ion-button
+          >
+
+        </div>
+
+
+      </form>
+    </div>
+  </div>
+
+
+</ion-content>

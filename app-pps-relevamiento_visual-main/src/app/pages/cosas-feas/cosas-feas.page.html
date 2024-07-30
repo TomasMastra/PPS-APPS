@@ -1,0 +1,57 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title style="font-family: monospace;">¡Cosas feas!</ion-title>
+      <ion-buttons slot="end">
+        <ion-img class="icon-back" src="../../../assets/regreso.png" name="logout" (click)="volver()"></ion-img>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-img class="icon-back" src="../../../assets/cerrar-sesion.png" name="logout" (click)="cerrarSesion()"></ion-img>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  @if(fotosFeas && fotosFeas.length > 0){
+    <ion-grid fixed>
+      <ion-row class="fotos">
+        <ion-col size="12" *ngFor="let item of fotosFeas">
+          <ion-card >
+            <img [src]="item.url" alt="fotoLinda">
+            <ion-card-header>
+              <ion-card-title>Usuario: {{item.user}}</ion-card-title>
+              <!-- <ion-card-subtitle>Usuario: {{item.user}}</ion-card-subtitle> -->
+              <ion-card-subtitle>Fecha: {{formatDate(item.date)}}</ion-card-subtitle>
+            </ion-card-header>
+            <ion-card-content>
+
+              <div class="card-btn">
+                <ion-text>
+                  <h5 class="votos-positivos">Votos positivos: {{item.likes.length -1}}</h5>
+                </ion-text>
+                <ion-text>
+                  <h5 class="votos-negativos">Votos negativos: {{item.dislikes.length -1}}</h5>
+                </ion-text>
+              </div>
+              <div class="card-btn">
+                <ion-button color="success" expand="block" shape="round" (click)="votar(item.refId, 'like')">
+                  Me gusta
+                </ion-button>
+                <ion-button color="danger"  expand="block"  shape="round" (click)="votar(item.refId, 'dislike')">
+                  No me gusta
+                </ion-button>
+              </div>
+            </ion-card-content>
+          </ion-card>
+        </ion-col>
+      </ion-row>
+    </ion-grid>
+    
+  }
+  
+  <ion-fab vertical="bottom" horizontal="center" slot="fixed" >
+    <ion-fab-button mode="ios" color="black" (click)="tomarFoto()">
+      <ion-img class="icon-img" src="../../../assets/botones/camara.png" name="logout"></ion-img>
+    </ion-fab-button>
+  </ion-fab>
+
+</ion-content>

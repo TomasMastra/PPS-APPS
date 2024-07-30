@@ -1,0 +1,252 @@
+<ion-content>
+  <!-- MENU LATERAL -->
+  <ion-menu contentId="main-content">
+    <ion-header style="color:#383838">
+      <ion-toolbar color="light">
+        <ion-title>Menú</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding" style="--background: rgb(138, 138, 138)">
+      <h4 style="color: #000; text-align: center; font-weight: bolder">
+        PUNTUACIONES
+      </h4>
+      <ion-grid
+        style="
+          color: #ffffff;
+          background-color: #383838;
+          margin-bottom: 2rem;
+          background: rgb(90, 90, 90);
+          border-radius: 10px;
+        "
+      >
+        <ion-row style="border-bottom: 2px solid #fff;">
+          <ion-col> </ion-col>
+          <ion-col> <b>Usuario</b> </ion-col>
+          <ion-col> <b>Puntos</b> </ion-col>
+          <ion-col> <b>Tiempo</b> </ion-col>
+        </ion-row>
+        <ion-row
+          *ngFor="let score of gameScoresList"
+          [ngClass]="user.userUid == score.userUid?'puntos-usuario':''"
+        >
+          <ion-col
+            ><ion-img
+              style="
+                width: 2rem;
+                height: 2rem;
+                object-fit: cover;
+                border-radius: 50%;
+                background: #fff;
+              "
+              src="{{score.characterImage}}"
+            ></ion-img
+          ></ion-col>
+          <ion-col>{{score.userName}}</ion-col>
+          <ion-col>{{score.score}}</ion-col>
+          <ion-col>{{score.time}}</ion-col>
+        </ion-row>
+      </ion-grid>
+      <ion-grid style="display: flex; flex-flow: column">
+        <ion-row style="flex-grow: 1">
+          <ion-col>
+            <button class="btn btns-cosas-lindas" (click)="chooseMenu(0)">
+              <img src="../../assets/more.png"  alt="icono" style="width: 24px; height: 24px; margin-right: 8px;">
+              Principal
+            </button>
+          </ion-col>
+        </ion-row>
+        <ion-row style="flex-grow: 1">
+          <ion-col>
+            <button class="btn btn-danger" (click)="logoutUser()">
+              <img src="../../assets/logout.png"  alt="icono" style="width: 24px; height: 24px; margin-right: 8px;">
+              Cerrar Sesión
+            </button>
+          </ion-col>
+        </ion-row>
+      </ion-grid>
+    </ion-content>
+  </ion-menu>
+
+  <div class="ion-page" id="main-content" style="background: #000;">
+    <ion-header class="header-custom">
+      <ion-toolbar class="toolbar-custom">
+        <ion-buttons slot="start">
+          <ion-menu-button></ion-menu-button>
+          <ion-title style="font-family: monospace;">Menú</ion-title>
+        </ion-buttons>
+          <img class="icon"  src="../../assets/grafico.png" alt="Estadísticas" src="../../assets/juegokinetico-png.png"          
+          style="
+          display: inline-block;
+          width: 2.5rem;
+          vertical-align: middle;
+          margin-left: 10rem;
+        ">  
+      </ion-toolbar>
+    </ion-header>  
+  </div>
+
+  <!-- MENU BOTONES INICIALES -->
+  <div style="width: 100%; height: 100%" *ngIf="menu == 0">
+    <ion-grid style="display: flex; flex-flow: column">
+      <ion-row style="flex-grow: 1; margin-bottom: 1rem; margin-top: 4rem">
+        <ion-col class="cosas-lindas-btn" (click)="chooseMenu(1)"> </ion-col>
+      </ion-row>
+      <ion-row style="flex-grow: 1; margin-bottom: 1rem">
+        <ion-col class="cosas-feas-btn" (click)="chooseMenu(2)"> </ion-col>
+      </ion-row>
+    </ion-grid>
+  </div>
+
+  <!-- IMÁGENES DC-->
+  <div *ngIf="menu == 1">
+    <ion-slides #slides pager="true" style="margin-top: 4rem">
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/batman.png"
+          (click)="chooseCharacter('batman')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/superman.png"
+          (click)="chooseCharacter('superman')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/ww.png"
+          (click)="chooseCharacter('ww')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/flash.png"
+          (click)="chooseCharacter('flash')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/guason.png"
+          (click)="chooseCharacter('guason')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide dc"
+          src="../../assets/aquaman.png"
+          (click)="chooseCharacter('aquaman')"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- IMÁGENES MARVEL -->
+  <div *ngIf="menu == 2">
+    <ion-slides #slides pager="true" style="margin-top: 4rem">
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/spiderman.png"
+          (click)="chooseCharacter('spiderman')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/ironman.png"
+          (click)="chooseCharacter('ironman')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/be.png"
+          (click)="chooseCharacter('be')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/ca.png"
+          (click)="chooseCharacter('ca')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/thor.png"
+          (click)="chooseCharacter('thor')"
+        />
+      </ion-slide>
+      <ion-slide>
+        <img
+          class="img-slide marvel"
+          src="../../assets/hulk.png"
+          (click)="chooseCharacter('hulk')"
+        />
+      </ion-slide>
+    </ion-slides>
+  </div>
+
+  <!-- JUEGO  -->
+
+  <!-- PUNTUACIÓN Y TIEMPO -->
+  <div
+    style="
+      display: flex;
+      justify-content: space-around;
+      color: #fff;
+      text-align: center;
+      margin-top: 3.5rem;
+      background: rgba(255, 0, 0, 0.486)!important;
+      border-radius: 0px 0px 10px 10px;
+    "
+  >
+    <h3><b>Puntuación</b>: {{score}}</h3>
+    <h3>{{getTime()}}</h3>
+  </div>
+
+  <!-- JUEGO TERMINADO  -->
+  <div
+    *ngIf="gameOver"
+    style="
+      position: absolute;
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
+      padding: 2rem;
+      margin-top: 30%;
+      border: 2px solid #fff;
+      border-radius: 10px;
+      background: rgba(255, 255, 255, 0.459);
+      z-index: 10;
+    "
+  >
+    <h2
+      style="
+        text-align: center;
+        font-size: 2rem;
+        color: #f00;
+        margin-bottom: 2rem;
+        font-weight: bolder;
+      "
+    >
+      JUEGO TERMINADO
+    </h2>
+    <button class="btn btn-danger" (click)="resetGame()">Reiniciar</button>
+  </div>
+
+  <!-- IMÁGEN DEL PERSONAJE -->
+  <img
+    *ngIf="menu == 3"
+    id="img-juego"
+    class="img-juego"
+    src="{{pathImageCharacter}}"
+    alt=""
+  />
+</ion-content>

@@ -1,0 +1,147 @@
+
+.contenedor-logo {
+    position: relative;
+    h1 {
+      color: #fff;
+      position: absolute;
+      top: 50%;
+      left: 15%;
+      margin: -25px 0 0 -25px;
+      z-index: 1000;
+      font-family: fantasy;
+    }
+  }
+  
+.auth-form {
+    width: 100%;
+    text-align: center;
+    // padding: 20px;
+}
+
+.custom-input {
+    color: #ffffff;
+    border: 2px 1 solid white;
+    --background: #242424;
+    font-family: monospace;
+    // margin: 20px 0;
+
+    
+    
+    ion-label {
+        position: relative;
+        bottom: 2px;
+    }
+    
+    .eye-icon {
+        position: relative;
+        top: 13px;
+    }
+}
+
+.error{
+    // height: 25px;
+    width: 82%;
+    background-color: rgb(221, 94, 153);
+    border-radius: 10px;
+    border: 1px solid red;
+    height: auto;
+    div{
+        color: white;
+        margin-left: 5px;
+    }
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+ion-content{
+    --background: none;
+   // background-image: url('../../../assets/bk/madera-bkg.jpg')!important;
+    background-size: cover;
+}
+
+ion-fab-button ion-img{
+    background-color: #b4a056;
+}
+
+.slot{
+    margin: 10%;
+    margin-bottom: 20%;
+}
+
+.subslot{
+    margin-bottom: 10px;
+}
+.btnIngreso{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+
+}
+
+.title{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #ffc40096;
+
+        ion-title{
+            color: #ffffff;
+            // -webkit-text-stroke: 0.1px #fff;
+            font-size: 40px;
+            font-weight: 800;
+            font-family: 'Ribeye', cursive;
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.btn-img{
+    height: 60px; 
+    width: 60px;
+}
+
+@media (orientation: landscape) {
+    .aux{
+        padding: 16px;
+        margin: 0!important;
+    }
+    .btn{
+        margin: 0!important;
+    }
+    .btn-img{
+        height: 55px; 
+        width: 55px;
+    }
+}
+
+.logo-app{
+    width: 25%;
+}
+
+.custom-background {
+    --background: #2c2c2c; /* Color de fondo deseado */
+  }
+  
+
+p {
+    margin-top: 1rem;
+    margin-bottom: 1rem;
+    font-family: monospace;
+    color: #ffffff;
+    font-size: 1.3rem;
+    font-weight: bold;
+    text-align: center;
+    // text-shadow: 1px 1px 2px #000;
+  }
+  

@@ -1,0 +1,233 @@
+<!-- <ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title>Inicio Rápido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item (click)="cargarUsuario('admin')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/rey.png" />
+        </ion-avatar>
+        <ion-label>Admin</ion-label>
+      </ion-item>
+      <ion-item (click)="cargarUsuario('tester')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/administracion.png" />
+        </ion-avatar>
+        <ion-label>Tester</ion-label>
+      </ion-item>
+      <ion-item (click)="cargarUsuario('usuario')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/persona-de-libre-dedicacion.png" />
+        </ion-avatar>
+        <ion-label>Usuario</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title class="title">Relevamiento Visual</ion-title>
+      <ion-title class="subtitle">Inicie sesión</ion-title>
+      <ion-buttons slot="end">
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+  <ion-content [fullscreen]="false">
+    <ion-row>
+      <form [formGroup]="form" class="auth-form" (ngSubmit)="ingresar()">
+      <ion-col size="12">
+        <div>
+          <div class="okko" *ngIf="form.valid" (click)="ingresar()">
+            <img src="../../../assets/gif/OK.gif">
+          </div>
+          <div class="okko" *ngIf="!form.valid">
+            <img src="../../../assets/gif/error2.gif">
+          </div>
+        </div>
+      </ion-col>
+        <ion-row class="ion-justify-content-center slot aux">
+          
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot">
+            <ion-item class="custom-input" lines="none">
+              <ion-input type="password" autocomplete="password" label="Contraseña" formControlName="password">
+              </ion-input>
+            </ion-item>
+            <div class="error"
+              *ngIf="form.controls?.['password']?.invalid && (form.controls?.['password']?.dirty || form.controls?.['password']?.touched)">
+              <div *ngIf="form.controls?.['password']?.errors?.['minlength']">La contraseña debe tener mínimo 6
+                caracteres</div>
+              <div *ngIf="form.controls?.['password']?.errors?.['required']">La contraseña es requerida</div>
+            </div>
+          </ion-col>
+        
+          <ion-toast
+            [isOpen]="isToastOpen"
+            message={{error}}
+            [duration]="3000"
+            (didDismiss)="setOpen(false)"
+            position='middle'
+        ></ion-toast>
+
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot">
+            <ion-item class="custom-input" lines="none">
+              <ion-input type="email" autocomplete="email" label="Correo" formControlName="email">
+              </ion-input>
+            </ion-item>
+            <div class="error"
+              *ngIf="form.controls?.['email']?.invalid && (form.controls?.['email']?.dirty || form.controls?.['email']?.touched)">
+              <div *ngIf="form.controls?.['email']?.errors?.['required']">El correo es requerido</div>
+              <div *ngIf="form.controls?.['email']?.errors?.['email']">El correo es inválido</div>
+            </div>
+          </ion-col>  
+        </ion-row>
+        
+        <ion-col size="12">
+          <div>
+            <div class="okko" *ngIf="form.valid">
+              <img src="../../../assets/gif/OK.gif" (click)="ingresar()">
+            </div>
+            <div class="okko" *ngIf="!form.valid">
+              <img src="../../../assets/gif/error2.gif">
+            </div>
+          </div>
+        </ion-col>
+      </form>
+    </ion-row>
+
+  </ion-content>
+
+</div> -->
+
+<!-- -->
+<ion-menu side="end" contentId="main-content">
+  <ion-header>
+    <ion-toolbar>
+      <ion-title style="font-family: monospace">Inicio Rápido</ion-title>
+    </ion-toolbar>
+  </ion-header>
+  <ion-content class="ion-padding">
+    <ion-list>
+      <ion-item (click)="cargarUsuario('admin')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/rey.png" />
+        </ion-avatar>
+        <ion-label>Admin</ion-label>
+      </ion-item>
+      <ion-item (click)="cargarUsuario('tester')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/administracion.png" />
+        </ion-avatar>
+        <ion-label>Tester</ion-label>
+      </ion-item>
+      <ion-item (click)="cargarUsuario('usuario')">
+        <ion-avatar aria-hidden="true" slot="start">
+          <img alt="" src="../../../assets/icon/persona-de-libre-dedicacion.png" />
+        </ion-avatar>
+        <ion-label>Usuario</ion-label>
+      </ion-item>
+
+    </ion-list>
+  </ion-content>
+</ion-menu>
+
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
+
+      <ion-title class="title" style="font-family: monospace; color:aliceblue">Iniciar sesión</ion-title>
+      <ion-buttons slot="end">
+        
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
+
+
+
+  <ion-content [fullscreen]="false">
+
+    <ion-row class="ion-justify-content-center slot aux">
+      <ion-col size="12" class="title">
+        <div class="ion-justify-content-center slot aux">
+          <ion-title style="color: white" size="large" class="title-text">Relevamiento</ion-title>
+          <ion-title style="color: white"size="large" class="title-text">Visual</ion-title>
+          <ion-img src="../../../assets/imagen.png"></ion-img>
+        </div>
+      </ion-col>
+    </ion-row>
+    
+      <div class="line"></div>
+
+    <ion-row>
+      <form [formGroup]="form" class="auth-form" (ngSubmit)="ingresar()">
+      <ion-col size="12">
+
+      </ion-col>
+        <ion-row class="ion-justify-content-center slot aux">
+          <label class="mb-1"><h6 class="mb-0 text-sm" style="color: #fff; font-family: monospace;">Dirección de Correo</h6></label>
+
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot">
+            <ion-item class="custom-input" lines="none">
+              <ion-input type="password" autocomplete="password" label="Contraseña" formControlName="password">
+              </ion-input>
+            </ion-item>
+            <div class="error"
+              *ngIf="form.controls?.['password']?.invalid && (form.controls?.['password']?.dirty || form.controls?.['password']?.touched)">
+              <div *ngIf="form.controls?.['password']?.errors?.['minlength']">La contraseña debe tener mínimo 6
+                caracteres</div>
+              <div *ngIf="form.controls?.['password']?.errors?.['required']">La contraseña es requerida</div>
+            </div>
+          </ion-col>
+        
+          <ion-toast
+            [isOpen]="isToastOpen"
+            message={{error}}
+            [duration]="3000"
+            (didDismiss)="setOpen(false)"
+            position='middle'
+        ></ion-toast>
+
+        <label class="mb-1"><h6 class="mb-0 text-sm" style="color: #fff; font-family: monospace;">Contraseña</h6></label>
+
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot">
+            <ion-item class="custom-input" lines="none">
+              <ion-input type="email" autocomplete="email" label="Correo" formControlName="email">
+              </ion-input>
+            </ion-item>
+            <div class="error"
+              *ngIf="form.controls?.['email']?.invalid && (form.controls?.['email']?.dirty || form.controls?.['email']?.touched)">
+              <div *ngIf="form.controls?.['email']?.errors?.['required']">El correo es requerido</div>
+              <div *ngIf="form.controls?.['email']?.errors?.['email']">El correo es inválido</div>
+            </div>
+          </ion-col>  
+        </ion-row>
+        
+        <ion-col size="12">
+          <div>
+
+          </div>
+        </ion-col>
+      </form>
+    </ion-row>
+
+    <div class="row mb-3 px-3" style="color: #fff">
+      <button
+        type="submit"
+        class="btn btn-ingresar text-center"
+        (click)="ingresar()"
+      >
+        Ingresar
+      </button>
+    </div>
+
+  </ion-content>
+
+</div>

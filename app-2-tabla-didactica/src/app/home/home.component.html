@@ -1,0 +1,33 @@
+<div class="wrapper">
+
+  <div class="home-page">
+    <div class="banderas">
+      <div class="flag-image" [class.selected]="isSelected('flag', 'Espania')" (click)="selectImage('flag', 'Espania')" style="width: calc(30% + 0.1cm);">
+        <img src="assets/España_flag.png" alt="Bandera de España">
+      </div>
+      <div class="flag-image" [class.selected]="isSelected('flag', 'ReinoUnido')" (click)="selectImage('flag', 'ReinoUnido')" style="width: calc(30% + 0.1cm);">
+        <img src="assets/ReinoUnido_flag.png" alt="Bandera del Reino Unido">
+      </div>
+      <div class="flag-image" [class.selected]="isSelected('flag', 'Portugal')" (click)="selectImage('flag', 'Portugal')">
+        <img src="assets/Portugal_flag.png" alt="Bandera de Portugal">
+      </div>
+    </div>
+
+    
+    <div class="temas">
+      <div class="animal-image" [class.selected]="isSelected('tema', 'Animal')" (click)="selectImage('tema', 'Animal')">
+        <img src="assets/Animal_tema.jpg" alt="Animales">
+      </div>
+      <div class="color-image" [class.selected]="isSelected('tema', 'Color')" (click)="selectImage('tema', 'Color')">
+        <img src="assets/Color_tema.jpg" alt="Colores">
+      </div>
+      <div class="numero-image" [class.selected]="isSelected('tema', 'Numero')" (click)="selectImage('tema', 'Numero')">
+        <img src="assets/Numeros_tema.jpg" alt="Numeros">
+      </div>
+    </div>
+    
+    <div class="button-logout">
+      <!-- <input type="button" (click)="goTo('/login')" value=" ⬅ " > -->
+    </div>
+  </div>
+</div>

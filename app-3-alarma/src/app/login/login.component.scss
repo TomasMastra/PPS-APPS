@@ -1,0 +1,274 @@
+/* Google Fonts - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+.container{
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #121313;
+    column-gap: 30px;
+}
+.form{
+    position: absolute;
+    max-width: 430px;
+    width: 100%;
+    padding: 30px;
+    border-radius: 6px;
+    background: #121313;
+}
+.form.signup{
+    opacity: 0;
+    pointer-events: none;
+}
+.forms.show-signup .form.signup{
+    opacity: 1;
+    pointer-events: auto;
+}
+.forms.show-signup .form.login{
+    opacity: 0;
+    pointer-events: none;
+}
+header{
+    font-size: 28px;
+    font-weight: 600;
+    color: #232836;
+    text-align: center;
+}
+form{
+    margin-top: 30px;
+}
+.form .field{
+    position: relative;
+    height: 50px;
+    width: 100%;
+    margin-top: 20px;
+    border-radius: 6px;
+}
+.field input,
+.field button{
+    height: 100%;
+    width: 100%;
+    border: none;
+    font-size: 16px;
+    font-weight: 400;
+    border-radius: 6px;
+    background-color: whitesmoke;
+    border-color: rgb(255, 107, 107);
+    color: #8b8b8b;
+}
+
+.field button{
+    color: #fff;
+    background-color: rgb(255, 107, 107);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+.field button:hover{
+    background-color: rgb(255, 107, 107);
+}
+a.facebook{
+    color: #000000;
+    background-color: rgb(255, 107, 107);
+}
+
+
+@media screen and (max-width: 400px) {
+    .form{
+        padding: 20px 10px;
+    }
+    
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+
+//////
+/// 
+
+
+
+
+
+.custom-input {
+    --border-color: #e0e0e0;
+    --border-radius: 15px;
+    --border-style: solid;
+    --border-width: 1px;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  
+  .custom-input input {
+    width: 100%;
+    margin: 0;
+    padding: 12px;
+    border: var(--border-width) var(--border-style) var(--border-color);
+    border-radius: var(--border-radius);
+    box-sizing: border-box;
+  }
+  
+  .ion-row {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  .form-content {
+    width: 100%;
+    padding: 0 16px; /* Ajusta este padding según sea necesario */
+  }
+
+  .contenedor-gral {
+    background: rgb(0, 0, 0);
+    background: linear-gradient(
+      0deg,
+      rgba(0, 0, 0, 1) 0%,
+      rgba(253, 45, 45, 1) 100%
+    );
+    font-family: Georgia, Times, "Times New Roman", serif;
+    height: 100%;
+  }
+  
+  .logo {
+    width: 200px;
+    height: 100px;
+    margin-top: 20px;
+    margin-left: 35px;
+  }
+  
+  .image {
+    width: 360px;
+    height: 280px;
+  }
+  
+  .border-line {
+    border-right: 1px solid #eeeeee;
+  }
+  
+  .line {
+    height: 1px;
+    width: 45%;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+  }
+  
+  .or {
+    width: 10%;
+    font-weight: bold;
+  }
+  
+  .text-sm {
+    font-size: 14px !important;
+  }
+  
+  ::placeholder {
+    color: #d1cdcd;
+    opacity: 1;
+    font-weight: 300;
+  }
+  
+  :-ms-input-placeholder {
+    color: #d1cdcd;
+    font-weight: 300;
+  }
+  
+  ::-ms-input-placeholder {
+    color: #d1cdcd;
+    font-weight: 300;
+  }
+  
+  input,
+  textarea {
+    padding: 10px 12px 10px 12px;
+    border: 1px solid lightgrey;
+    border-radius: 2px;
+    margin-bottom: 5px;
+    margin-top: 2px;
+    width: 100%;
+    box-sizing: border-box;
+    color: #ffffff;
+    font-size: 14px;
+    letter-spacing: 1px;
+  }
+  
+  input:focus,
+  textarea:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    border: 2px solid #ffffff;
+    outline-width: 0;
+  }
+  
+  button:focus {
+    -moz-box-shadow: none !important;
+    -webkit-box-shadow: none !important;
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+  
+  .btn-ingresar {
+    background-color: #2264af;
+    width: 150px;
+    color: #fff;
+    border-radius: 2px;
+    display: block;
+    margin: 1rem auto 1rem auto;
+    box-shadow: 1px 1px 2px rgb(133, 126, 126);
+  }
+  
+  .btn-ingresar:hover {
+    background-color: #000;
+    cursor: pointer;
+  }
+  
+  .btn-rapido {
+    width: 7rem;
+    margin: 5px;
+    font-weight: bold;
+    box-shadow: 1px 1px #000;
+  }
+  
+  .btn-rapido:hover {
+    color: #fff;
+    background: #000;
+  }
+
+
+
+  .media-options {
+    display: flex;
+    justify-content: space-around; /* O usa 'space-between' o 'space-evenly' según tu preferencia */
+    align-items: center; /* Alinea verticalmente los elementos */
+  }
+  
+  .media-options ion-img {
+    width: 20%; /* Ajusta el tamaño según tu preferencia */
+    height: auto; /* Mantén la proporción de las imágenes */
+  }
+
+  .media-options p {
+    width: 20%; /* Ajusta el tamaño según tu preferencia */
+    height: auto; /* Mantén la proporción de las imágenes */
+  }
+  
+  
+
+
+
+
+
+  
+  
+

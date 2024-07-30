@@ -1,0 +1,23 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title style="font-family: monospace;">Estadísticas</ion-title>
+    <ion-buttons slot="end">
+      <ion-img class="icon-back" src="../../../assets/regreso.png" name="logout" (click)="volver()"></ion-img>
+    </ion-buttons>
+    <ion-buttons slot="end">
+      <ion-img class="icon-back" src="../../../assets/cerrar-sesion.png" name="logout" (click)="cerrarSesion()"></ion-img>
+    </ion-buttons>
+</ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="lindas">
+    <app-pie-graphic></app-pie-graphic>
+  </div>
+  <div class="feas">
+    <app-bar-graphic></app-bar-graphic>
+  </div>
+
+</ion-content>
+

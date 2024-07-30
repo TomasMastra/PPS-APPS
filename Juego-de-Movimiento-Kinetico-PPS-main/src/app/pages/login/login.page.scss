@@ -1,0 +1,265 @@
+ion-content {
+  --background: rgb(0, 0, 0);
+  --background: linear-gradient(
+    242deg,
+    rgb(82, 82, 82) 63%,
+    rgb(126, 126, 126) 64%
+  );
+  overflow: hidden;
+}
+
+.contenedor-gral {
+  min-height: 100vh;
+  font-family: fantasy;
+}
+
+.contenedor-usuarios {
+  display: flex;
+  justify-content: space-around;
+}
+
+.usuarios-rapidos {
+  display: flex;
+  flex-direction: column;
+  p {
+    text-align: center;
+  }
+  img {
+    width: 5rem;
+    border-radius: 50%;
+    border: 2px dashed #000;
+  }
+}
+
+.seleccionado {
+  box-shadow: 0 0 24px #c9330e;
+}
+
+.usuarios-rapidos:hover {
+  cursor: pointer;
+}
+
+.usuarios-rapidos > img:active {
+  transform: scale(1.2);
+  transition: transform 0.3s;
+}
+
+.border-line {
+  border-right: 1px solid #eeeeee;
+}
+
+.line {
+  height: 3px;
+  width: 95%;
+  background-color: #e0e0e0;
+  margin-top: 10px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.text-sm {
+  text-align: center;
+  margin-top: 0;
+}
+
+::placeholder {
+  color: #9b9494;
+  opacity: 1;
+  font-weight: 300;
+}
+
+:-ms-input-placeholder {
+  color: #9b9494;
+  font-weight: 300;
+}
+
+::-ms-input-placeholder {
+  color: #9b9494;
+  font-weight: 300;
+}
+
+input,
+textarea {
+  padding: 10px 12px;
+  border: 1px solid #ffffff;
+  border-radius: 15px;
+  margin-bottom: 5px;
+  margin-top: 2px;
+  width: 80%;
+  height: 50px;
+  box-sizing: border-box;
+  color: #ffffff;
+  font-size: 14px;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: #242424;
+  border-width: 1px;
+  border-style: solid;
+
+  font-family: sans-serif; /* Cambia esto a 'sans-serif' para eliminar el estilo de fuente */
+  letter-spacing: normal; /* Restablece el espaciado de letras */
+}
+
+
+
+button:focus {
+  -moz-box-shadow: none !important;
+  -webkit-box-shadow: none !important;
+  box-shadow: none !important;
+  outline-width: 0;
+}
+
+.btn-ingresar {
+  background-color: #ff5e5e;
+  width: 70%;
+  height: 3rem;
+  color: rgb(255, 255, 255);
+  border-radius: 10px;
+  display: block;
+  margin: 1rem auto 1rem auto;
+}
+
+.btn-ingresar:hover {
+  background-color: rgb(121, 213, 255);
+  cursor: pointer;
+  border-color: #ccc;
+}
+
+input:focus,
+textarea:focus {
+  box-shadow: none !important;
+  border: 2px solid #ffffff;
+  outline-width: 0;
+}
+
+// ***************************************************************************
+// ***************************************************************************
+// ***************************************************************************
+// ***************************************************************************
+
+/* From uiverse.io by @Jay-9527 */
+/* The switch - the box around the slider */
+.switch {
+  font-size: 17px;
+  position: relative;
+  display: inline-block;
+  width: 2.8em;
+  height: 1.7em;
+ }
+ 
+ /* Hide default HTML checkbox */
+ .switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+ }
+ 
+ /* The slider */
+ .slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #ccc;
+  transition: .4s;
+  border-radius: 30px;
+ }
+ 
+ .slider:before {
+  position: absolute;
+  content: "";
+  height: 1.2em;
+  width: 1.2em;
+  border-radius: 20px;
+  left: 0.2em;
+  bottom: 0.2em;
+  background-color: white;
+  transition: .4s;
+ }
+ 
+ input:checked + .slider {
+  background-color: rgb(0, 132, 255);
+ }
+ 
+ input:focus + .slider {
+  box-shadow: 0 0 1px rgb(0, 132, 255);
+ }
+ 
+ input:checked + .slider:before {
+  transform: translateX(1.5em);
+ }
+
+
+// ***************************
+// ***************************
+// ***************************
+// ***************************
+// ***************************
+
+ /* From uiverse.io by @Cornerstone-04 */
+.input {
+  width: 80%;
+  height: 4rem;
+  border: 2px solid transparent;
+  outline: none;
+  background-color: #212121;
+  padding: 5px;
+  transition: .5s linear;
+  font-family: monospace;
+  letter-spacing: 1px;
+  color: #fff;
+  border-radius: 2px solid white;
+}
+
+.input:focus {
+  border: 2px solid #09d3f7;
+  caret-color: #fa4753;
+  color: #47eefa;
+}
+
+.input::placeholder{
+  color: #fff;
+}
+
+.input:focus::placeholder {
+  color: #47e5fa;
+}
+
+////
+
+
+ion-header {
+  --background: #747474; /* Cambia el color de fondo del header */
+}
+
+toolbar-background {
+  --background: #000000; /* Cambia el color de fondo del toolbar */
+  background-color: #000;
+}
+
+
+header {
+  background-color: #333;
+  padding: 5px 0;  /* Reduce el padding para hacer el header más chico */
+}
+
+.header-custom {
+  --background: #000 !important; /* Cambia el color de fondo del header */
+  --color: #fff !important; /* Cambia el color del texto */
+  margin-bottom: 40px; /* Ajusta el valor según tus necesidades */
+
+}
+
+.header-custom {
+  --background: #000 !important; /* Cambia el color de fondo del toolbar */
+  --color: #fff !important; /* Cambia el color del texto del toolbar */
+  margin-bottom: 40px; /* Ajusta el valor según tus necesidades */
+
+}
+
+
+

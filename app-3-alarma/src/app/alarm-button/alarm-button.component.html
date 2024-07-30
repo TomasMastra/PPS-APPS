@@ -1,0 +1,36 @@
+<ion-content [fullscreen]="true" >
+  <ion-header>
+    <ion-toolbar class="ion-text-center toolbar-color">
+      @if(activado){
+        <ion-title class="title-container">Presione para desactivar</ion-title>
+
+      }@else {
+        <ion-title class="title-container">Presione para activar</ion-title>    
+
+      }
+    </ion-toolbar>
+  </ion-header>
+
+  <div class="container">
+    @if(!activado){
+      <img  src="../assets/encender.png" alt="boton-activar" (click)="onoff()">
+
+    }@else {
+      <img  src="../assets/apagar.png" alt="boton-activar" (click)="onoff()">
+
+    }
+
+  </div>
+  
+    <!-- Tu contenido aquí -->
+    <ion-toolbar class="ion-text-center toolbar-color"><br><br>
+      <ion-button>        <ion-title class="title-container" (click)="cerrarSesion()">Cerrar sesión</ion-title>
+      </ion-button>
+
+      
+    </ion-toolbar>
+  
+
+  
+
+</ion-content>

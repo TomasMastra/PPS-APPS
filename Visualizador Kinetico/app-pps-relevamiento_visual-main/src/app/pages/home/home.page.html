@@ -1,0 +1,70 @@
+<!-- <ion-header [translucent]="true">
+  <ion-toolbar>
+      <ion-title>Menú</ion-title>
+      <ion-buttons slot="end">
+        <ion-img class="icon-back" src="../../../assets/icon/grafico.png" name="logout" (click)="goTo('/estadisticas')"></ion-img>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-img class="icon-back" src="../../../assets/icon/userGallery.png" name="logout" (click)="goTo('/fotos-del-usuario')"></ion-img>
+      </ion-buttons>
+      <ion-buttons slot="end">
+        <ion-img class="icon-back" src="../../../assets/icon/apagar.png" name="logout" (click)="cerrarSesion()"></ion-img>
+      </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+<ion-content [fullscreen]="true">
+  <ion-row>
+    <ion-col size="12">
+      <ion-button color="success" expand="full" size="large" (click)="goTo('/cosas-lindas')">
+        <ion-row>
+          <ion-img src="../../../assets/botones/comprobado.png"></ion-img>
+        </ion-row>
+        <ion-row>
+          Cosas Lindas
+        </ion-row>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+  <ion-row>
+    <ion-col size="12">
+      <ion-button color="secondary" expand="block" size="large" (click)="goTo('/cosas-feas')">
+        Cosas Feas
+        <ion-img src="../../../assets/botones/cancelar.png"></ion-img>
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content> -->
+
+
+<body>
+  <header>
+      <div class="container">
+          <div class="logo" style="font-family: monospace;">Menú</div>
+          <nav>
+              <ul class="iconos">
+                  <img class="icon"  src="../../assets/grafico.png" alt="Estadísticas" (click)="goTo('/estadisticas')">
+                  <img class="icon" src="../../../assets/usuario.png" alt="Galería de Usuario" (click)="goTo('/fotos-del-usuario')">
+                  <img class="icon"  src="../../assets/cerrar-sesion.png" alt="Cerrar Sesión" (click)="cerrarSesion()">
+              </ul>
+          </nav>
+      </div>
+  </header>
+  <main>
+    <div class="content" style="background: #2c2c2c;">
+      <div>
+          <button class="button button-success" (click)="goTo('/cosas-lindas')">
+              <img src="../../assets/cosas-lindas.png" alt="Cosas Lindas">
+              Cosas Lindas
+          </button>
+      </div>
+      <div>
+          <button class="button button-secondary" (click)="goTo('/cosas-feas')">
+            <img src="../../assets/cosas-feas.png" alt="Cosas Feas">
+              Cosas Feas
+          </button>
+      </div>
+  </div>
+  </main>
+</body>
+
+

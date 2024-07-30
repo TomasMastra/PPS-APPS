@@ -1,0 +1,234 @@
+// MENU PRINCIPAL
+
+ion-content {
+  --background: rgb(0, 0, 0);
+  --background: linear-gradient(
+    242deg,
+    rgb(82, 82, 82) 63%,
+    rgb(126, 126, 126) 64%
+  );
+  overflow: hidden;
+
+  overflow: hidden;
+  position: relative;
+  .cosas-lindas-btn {
+    background: url("../../assets/dc.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    text-align: center;
+    margin-bottom: 10px;
+    height: 35vh;
+    margin-top: 15px;
+  }
+  .cosas-lindas-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  .cosas-feas-btn {
+    background: url("../../assets/marvel.jpg");
+    background-size: cover;
+    background-position: center;
+    border-radius: 15px;
+    text-align: center;
+    height: 35vh;
+  }
+  .cosas-feas-btn:active {
+    transform: scale(0.9);
+    transition: transform 0.3s;
+  }
+  .btn-danger {
+    width: 15rem;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+  .btn-danger:active {
+    transform: scale(1.1);
+    transition: transform 0.3s;
+  }
+}
+
+ion-menu::part(backdrop) {
+  background-color: rgba(255, 0, 255, 0.5);
+}
+
+ion-menu::part(container) {
+  border-radius: 0 20px 20px 0;
+  box-shadow: 4px 0px 16px rgba(255, 0, 255, 0.18);
+}
+
+// MENU COSAS LINDAS Y FEAS
+.btns-cosas-lindas {
+  width: 15rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  background: rgb(11, 119, 168);
+  color: #fff;
+  text-align: center;
+  border-radius: 10px;
+}
+.btns-cosas-lindas:hover {
+  color: #000;
+}
+.btns-cosas-lindas:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+.btn-menu-cl {
+  background: black;
+}
+.btn-sesion-cl {
+  background: rgb(168, 28, 28);
+}
+
+// SLIDES
+.dc {
+  width: 95%;
+  height: 85vh;
+  background: rgba(37, 77, 255, 0.25);
+  background: url("../../assets/dc.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+}
+.dc:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.marvel {
+  width: 95%;
+  height: 85vh;
+  background: rgba(255, 19, 19, 0.25);
+  background: url("../../assets/marvel.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  border-radius: 10px;
+  backdrop-filter: blur(10px);
+  margin: 12px;
+}
+.marvel:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+// VISTAS
+.img-animal-vert {
+  width: 10rem;
+  height: 10rem;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.img-animal-vert:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+.img-animal-hor {
+  height: 100%;
+  width: 100%;
+  object-fit: contain;
+  border-radius: 10px;
+}
+.img-animal-hor:active {
+  transform: scale(0.9);
+  box-shadow: 0 0 16px rgb(240, 0, 0);
+  transition: transform 0.3s;
+}
+
+.grid-vertical-animales {
+  height: 89%;
+  display: flex;
+  flex-flow: column;
+}
+
+// JUEGO
+
+.img-juego {
+  width: 10rem;
+  height: 10rem;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+  object-fit: contain;
+  animation-name: img-character;
+  animation-duration: 2s;
+  animation-delay: 0.1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+  //border-color:#000;
+}
+
+.puntos-usuario {
+  color: #000000;
+  font-weight: bolder;
+  animation-name: puntos;
+  animation-duration: 3s;
+  animation-delay: 0.1s;
+  animation-timing-function: linear;
+  animation-iteration-count: infinite;
+}
+
+//
+@keyframes img-character {
+  0% {
+    background-color: rgba(247, 73, 73, 0.801);
+  }
+  50% {
+    background-color: rgba(247, 73, 73, 0.801);
+  }
+  100% {
+    background-color: rgba(247, 73, 73, 0.801);
+  }
+}
+
+@keyframes puntos {
+  0% {
+    color: #e7bd00;
+  }
+  50% {
+    color: #e7bd00;
+  }
+  100% {
+    color: #e7bd00;
+  }
+}
+
+///////////
+/// 
+/// 
+
+
+
+
+header {
+  background-color: #333;
+  padding: 5px 0;  /* Reduce el padding para hacer el header más chico */
+}
+
+.header-custom {
+  --background: #353535 !important; /* Cambia el color de fondo del header */
+  --color: #fff !important; /* Cambia el color del texto */
+  margin-bottom: 40px; /* Ajusta el valor según tus necesidades */
+
+}
+/*
+.toolbar-custom {
+  --background: #1f1f1f !important; 
+  --color: #fff !important; 
+  margin-bottom: 40px; 
+
+}*/
+
+
+
+

@@ -1,0 +1,60 @@
+.button-container {
+  display: grid;
+  gap: 35px; /* Espacio entre los botones */
+  padding: 20px; /* Padding del contenedor */
+}
+
+button {
+  width: 100%; /* Ancho del botón al 100% del contenedor */
+  height: 150px; /* Altura del botón */
+  font-size: 28px; /* Tamaño de la fuente */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #242428; /* Color de fondo del botón */
+  color: rgb(253, 0, 0); /* Color del texto */
+  border-radius: 12px; /* Bordes redondeados */
+  padding: 10px; /* Padding dentro del botón */
+  font-size: 80px;
+}
+
+@media (orientation: portrait) {
+  .button-container {
+    grid-template-columns: 1fr 1fr; /* 2 columnas en modo vertical */
+    padding: 35px; /* Ajusta el padding para modo portrait */
+  }
+
+  button {
+    height: 220px; /* Ajusta la altura en modo portrait */
+  }
+}
+
+@media (orientation: landscape) {
+  .button-container {
+    grid-template-columns: 1fr 1fr 1fr; /* 3 columnas en modo horizontal */
+  }
+}
+
+:host {
+  background-color: #8198ba; /* Color de fondo del componente */
+}
+
+
+ion-fab {
+  .main-img, .icon-img {
+    width: 40px;
+    height: 40px;
+  }
+}
+
+:host{
+  background-color: #8198ba;
+}
+ion-app{
+  background-color: #8198ba;
+}
+
+.button-container{
+  background-color: #8198ba;
+
+}

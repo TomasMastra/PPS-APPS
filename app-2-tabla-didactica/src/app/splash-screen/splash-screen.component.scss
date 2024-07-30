@@ -1,0 +1,23 @@
+  img {
+    width: 100%; /* Ajusta el ancho de la imagen al 25% del tamaño original */
+    height: auto; /* Permite que la altura se ajuste automáticamente para mantener la proporción */
+    margin-right: 0.5cm; /* Mueve los botones 0.5 cm a la derecha */
+
+  }
+  
+
+  
+  /* Cambiar el color de fondo de una lista desordenada a verde */
+  
+  :host {
+    background-color: #000000;
+  }
+  
+
+  div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }

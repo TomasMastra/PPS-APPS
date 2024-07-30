@@ -1,0 +1,281 @@
+.titulo-principal{
+  text-align: center;
+  margin-top: 20px;
+  font-size: 2.5rem;
+}
+.contenedor-botones{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.boton-numero{
+  width: 90%;
+  background-color: #fed15a;
+  margin-top: 65px;
+  height: 120px;
+  text-align: center;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  border-radius: 25px;
+  border: 6px;
+}
+
+.boton-numero:hover{
+  background-color: #8e87f3;
+}
+
+#container a {
+  text-decoration: none;
+}.rotating-image {
+  animation: rotate 4.5s infinite linear;
+}
+
+@keyframes rotate {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+.flipped {
+  transform: rotateY(180deg);
+}
+
+.contenedor-carta-animal{
+  padding: 5px;
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-animal{
+  height: 220px !important;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0 7px 0 7px;
+}
+
+.flip-container-animal {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+}
+
+.icon-back{
+  width: 50px;
+  padding-right: 5px;
+  padding-left: 5px;
+}
+
+.flipper-animal {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.front-animal,
+.back-animal {
+  width: 100%;
+  height: 210px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+      
+  img{
+      height: 50%;
+  }
+  transform-style: preserve-3d;
+}
+
+.front-animal {
+  background-color:#1296e2;
+  border-radius: 10px;
+}
+
+.back-animal {
+  background-color: #1296e2;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+//HERRAMIENTAS
+
+.contenedor-cartas-herramienta{
+  padding: 8px;
+  height: 100%;
+  width: 100% !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-herramienta{
+  height: 150px !important;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0 7px 0 7px;
+  // margin: 0 15px 0 15px;
+  .back{
+      img{
+          height: 50px;
+      }
+  }
+  
+  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  // margin-top: 150px;
+  
+}
+.flip-container-herramienta {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  
+  // margin-bottom: 15px;
+}
+
+.flipper-herramienta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.front-herramienta,
+.back-herramienta {
+  width: 100%;
+  height: 140px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+      
+  img{
+      height: 60%;
+  }
+  transform-style: preserve-3d;
+}
+
+.front-herramienta {
+  background-color:#1296e2;
+  border-radius: 10px;
+}
+
+.back-herramienta {
+  background-color: #1296e2;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}
+
+//FRUTAS
+
+.contenedor-cartas-fruta{
+  padding: 5px;
+  height: 100%;
+  width: 100% !important;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.carta-fruta{
+  height: 100px !important;
+  width: 45%;
+  display: flex;
+  justify-content: center;
+  align-items: center;    
+  flex-direction: column;
+  background-color: transparent;
+  margin: 0 7px 0 7px;
+  // margin: 0 15px 0 15px;
+  .back{
+      img{
+          height: 50px;
+      }
+  }
+  
+}
+.flip-container-fruta {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  transform-style: preserve-3d;
+  transition: transform 0.6s;
+  
+  // margin-bottom: 15px;
+}
+
+.flipper-fruta {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  transform-style: preserve-3d;
+ 
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
+
+.front-fruta,
+.back-fruta {
+  width: 80%;
+  height: 90px;
+  position: absolute;
+  backface-visibility: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+      
+  img{
+      height: 80%;
+  }
+  transform-style: preserve-3d;
+}
+
+.front-fruta {
+  background-color:#1296e2;
+  border-radius: 10px;
+}
+
+.back-fruta {
+  background-color: #1296e2;
+  border-radius: 10px;
+  transform: rotateY(180deg);
+}

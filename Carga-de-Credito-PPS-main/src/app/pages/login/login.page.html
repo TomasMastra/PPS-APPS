@@ -1,0 +1,81 @@
+<div class="container-fluid mx-auto contenedor-gral">
+  <div class="contenedor-logo">
+    <h1>CARGA DE CRÉDITO</h1>
+    <img
+      style="
+        width: 10rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.6;
+      "
+      src="../../../assets/carga-credito-png.png"
+      alt="logo"
+    />
+  </div>
+  <div class="row mb-4 px-3" style="color: #fff">
+    <h6 class="mb-3 mr-4 mt-3 text-center"></h6>
+    <div class="contenedor-usuarios">
+      <div class="usuarios-rapidos-admin">
+        <p>Admin</p>
+        <img
+          [ngClass]="admin ? 'seleccionado' : ''"
+          src="../../../assets/admin.png"
+          alt="admin"
+          (click)="loadFastUser(1)"
+        />
+      </div>
+      <div class="usuarios-rapidos">
+        <p>Usuario</p>
+        <img
+          [ngClass]="usuario ? 'seleccionado' : ''"
+          src="../../../assets/usuario.png"
+          alt="usuario"
+          (click)="loadFastUser(3)"
+        />
+      </div>
+      <div class="usuarios-rapidos">
+        <p>Invitado</p>
+        <img
+          [ngClass]="invitado ? 'seleccionado' : ''"
+          src="../../../assets/invitado.png"
+          alt="usuario"
+          (click)="loadFastUser(2)"
+        />
+      </div>
+    </div>
+  </div>
+  <div class="row px-3" style="color: #fff;">
+    <div class="line"></div>
+    <p class="text-center mt-2">O ingresa con tu usuario</p>
+  </div>
+  <div class="row px-3" style="color: #fff" >
+    <label class="mb-1"><h6 class="mb-0 text-sm">Dirección de Correo</h6></label>
+    <input
+      [(ngModel)]="email"
+      class="mb-2"
+      type="email"
+      name="email"
+      placeholder="Correo"
+    />
+  </div>
+  <div class="row" style="padding-left: 20px; padding-right: 20px; color: #fff">
+    <label><h6 class="text-sm">Contraseña</h6></label>
+    <input 
+      [(ngModel)]="password"
+      type="password"
+      name="password"
+      placeholder="Contraseña"
+
+    />
+  </div>
+  <div class="row mb-3 px-3" style="color: #fff">
+    <button
+      type="submit"
+      class="btn btn-ingresar text-center"
+      (click)="loginUser()"
+    >
+      Ingresar
+    </button>
+  </div>
+</div>

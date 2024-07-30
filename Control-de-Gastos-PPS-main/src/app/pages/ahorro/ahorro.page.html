@@ -1,0 +1,41 @@
+<ion-content>
+  <div
+    class="d-flex justify-content-around align-items-center"
+    style="
+      border-bottom: 4px solid #fff;
+      padding-bottom: 1rem;
+      margin-bottom: 1rem;
+    "
+  >
+    <ion-icon style="font-size: 7rem" name="calendar-outline"></ion-icon>
+    <div style="color: #fff; padding: 0 1rem;">
+      <p style="text-align: center; font-size: 2.3rem; font-weight: bolder">
+        {{currentYear}}
+      </p>
+    </div>
+  </div>
+
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <p
+          style="
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 1rem;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+          "
+        >
+          Gastos vs Ahorro
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <canvas #canvas height="350"></canvas>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>

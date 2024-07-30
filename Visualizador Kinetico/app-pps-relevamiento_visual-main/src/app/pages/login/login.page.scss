@@ -1,0 +1,189 @@
+.auth-form {
+    width: 100%;
+    text-align: center;
+}
+
+.subtitle{
+    margin-left: 21%;
+    font-size: 16px;
+}
+.title{
+    margin-left: 21%;
+}
+.custom-input {
+    --border-color: #e0e0e0;
+    --border-radius: 15px;
+    --border-style: solid;
+    --border-width: 1px;
+    
+    ion-label {
+        position: relative;
+        bottom: 2px;
+    }
+    
+    .eye-icon {
+        position: relative;
+        top: 13px;
+    }
+}
+
+.error{
+    width: 100%;
+    background-color: rgb(78, 156, 219);
+    border-radius: 10px;
+    border: 1px solid rgb(0, 153, 255);
+    height: auto;
+    div{
+        color: white;
+        margin-left: 5px;
+    }
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+ion-content{
+    --background: #302f2f;
+}
+
+ion-fab-button ion-img{
+    background-color: #b4a056;
+}
+
+.slot{
+    margin: 5%;
+}
+
+.subslot{
+    margin-bottom: 30px;
+}
+.btnIngreso{
+    padding: 0;
+    margin: 0;
+    width: 90%;
+
+}
+
+.title{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #419b5096;
+
+        ion-title{
+            color: #234191;
+            // -webkit-text-stroke: 0.1px #fff;
+            font-size: 40px;
+            font-weight: 800;
+            font-family: 'Ribeye', cursive;
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.btn-img{
+    height: 60px; 
+    width: 60px;
+}
+
+@media (orientation: landscape) {
+    .aux{
+        padding: 16px;
+        margin: 0!important;
+    }
+    .btn{
+        margin: 0!important;
+    }
+    .btn-img{
+        height: 55px; 
+        width: 55px;
+    }
+}
+
+.acceso-rapido-btn{
+    background-color: #1e1e1e;
+    ion-button{
+        width: 100%;
+        ion-avatar{
+            width: 50px;
+        }
+    }
+}
+
+
+.okko{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    img{
+        width: 200px;
+    }
+}
+.cencer{
+    display: flex;
+    justify-content: center;
+}
+
+ion-img{
+    width: 10%;
+}
+
+.title-contenedor {
+    background-color: blue; /* Fondo azul */
+    padding: 1rem; /* Añadir espacio interno para que el texto no esté pegado al borde */
+  }
+  
+  .title-contenedor {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100%; /* Asegura que el contenedor ocupe todo el alto del ion-col */
+    color: red; /* Opcional: color del texto si lo deseas */
+  }
+  
+  .title-text {
+    text-align: center;
+    color: red; /* Color del texto */
+    margin: 0.5rem 0; /* Espacio entre títulos */
+  }
+
+  .line {
+    height: 3px;
+    width: 95%;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  button:focus {
+    box-shadow: none !important;
+    outline-width: 0;
+  }
+  
+  .btn-ingresar {
+    background-color: #0e9dc9;
+    width: 225px;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto;
+  }
+  
+  .btn-ingresar:hover {
+    cursor: pointer;
+  }
+  

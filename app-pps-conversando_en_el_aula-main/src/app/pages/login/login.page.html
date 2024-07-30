@@ -1,0 +1,90 @@
+
+<ion-content [fullscreen]="true">
+
+  <div class="contenedor-logo">
+    <img
+      style="
+        width: 10rem;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+        opacity: 0.6;
+      "
+      src="../assets/logo.png"
+      alt="logo"
+    />
+    <h1>CONVERSANDO EN EL AULA</h1>
+
+  </div>
+  
+  <ion-row>
+    <form [formGroup]="form" class="auth-form" (ngSubmit)="ingresar()">
+      <ion-row class="ion-justify-content-center slot aux">
+        <div style="background-color: #267775; width: 100%; border-radius: 15px;">
+
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot send">
+              <ion-item class="custom-input" lines="none">
+                <ion-input 
+                  type="email" 
+                  autocomplete="email" 
+                  label="Correo" 
+                  formControlName='email' 
+                  labelPlacement="floating">
+                </ion-input>
+              </ion-item>
+              <div class="error" *ngIf="form.controls?.['email']?.invalid && (form.controls?.['email']?.dirty || form.controls?.['email']?.touched)">
+                <div *ngIf="form.controls?.['email']?.errors?.['required']">El correo es requerido</div>
+                <div *ngIf="form.controls?.['email']?.errors?.['email']">El correo es inválido</div>
+              </div>  
+          </ion-col>  
+  
+          <ion-col size="12" sizeLg="12" sizeSm="6" class="subslot received">
+              <ion-item class="custom-input" lines="none">
+                <ion-input 
+                  type="password" 
+                  autocomplete="password" 
+                  label="Contraseña" 
+                  formControlName='password' 
+                  labelPlacement="floating">
+                </ion-input>
+              </ion-item>
+              <div class="error" *ngIf="form.controls?.['password']?.invalid && (form.controls?.['password']?.dirty || form.controls?.['password']?.touched)">
+                <div *ngIf="form.controls?.['password']?.errors?.['minlength']">La contraseña debe tener mínimo 6 caracteres</div>
+                <div *ngIf="form.controls?.['password']?.errors?.['required']">La contraseña es requerida</div>
+              </div>
+          </ion-col>
+        </div>
+      </ion-row>  
+    </form>
+
+  </ion-row>
+
+  <ion-row class="ion-justify-content-center ">
+    <ion-button [disabled]="!form.valid" class="btn-ingresar">
+      <ion-img src="../../../assets/icon/enviar-mensaje.png" class="btn-img" (click)="ingresar()"></ion-img>
+    </ion-button>
+  </ion-row>
+
+  <ion-row >
+    <ion-col size="12"> 
+      <ion-button (click)="cargarUsuario('admin')" expand="block" style="--background: #0cc0df">
+        a d m i n
+      </ion-button>
+    </ion-col>
+    <ion-col size="12"> 
+      <ion-button (click)="cargarUsuario('tester')" expand="block" style="--background: #5272ffd2">
+        t e s t e r
+      </ion-button>
+    </ion-col>
+    <ion-col size="12"> 
+      <ion-button (click)="cargarUsuario('usuario')" expand="block" style="--background: #00bf63">
+        u s u a r i o
+      </ion-button>
+    </ion-col>
+    <ion-col size="12"> 
+      <ion-button (click)="cargarUsuario('invitado')" expand="block" style="--background: #0097b2">
+        i n v i t a d o
+      </ion-button>
+    </ion-col>
+  </ion-row>
+</ion-content>

@@ -1,0 +1,25 @@
+<ion-content [fullscreen]="true">
+  <div class="btn-containt">
+    <ion-button class="pps-a" expand="block" (click)="goTo('/chat-a')" >
+      P
+      P
+      S
+      -
+      A
+    </ion-button>
+    <ion-button class="pps-b" expand="block" (click)="goTo('/chat-b')" >
+      P
+      P
+      S
+      -
+      B
+    </ion-button>
+  </div>
+
+  <ion-fab vertical='center' horizontal="center" slot="fixed" >
+    <ion-fab-button>
+      <ion-img class="icon-img" src="../../../assets/icon/apagar.png" (click)="cerrarSesion()"></ion-img>
+    </ion-fab-button>    
+  </ion-fab>
+
+</ion-content>

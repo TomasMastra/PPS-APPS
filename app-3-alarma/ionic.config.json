@@ -1,0 +1,7 @@
+{
+  "name": "app-3-alarma",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

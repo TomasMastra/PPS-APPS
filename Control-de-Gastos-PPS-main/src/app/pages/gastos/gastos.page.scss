@@ -1,0 +1,38 @@
+ion-content {
+  --background: rgb(100, 100, 100);
+
+}
+
+.btn-sumar {
+  position: relative;
+  z-index: 100;
+  color: rgb(99, 175, 0);
+  background: rgb(255, 255, 255);
+  font-size: 4rem;
+  border-radius: 50%;
+}
+.btn-sumar:active {
+  transform: scale(0.9);
+  transition: transform 0.3s;
+}
+
+ion-item {
+  color: #ffffff;
+  --background: rgba(31, 31, 31, 0.582);
+  font-family: sans-serif;
+  border-radius: 15px;
+  border: 2px solid white;
+
+}
+
+p {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-family: monospace;
+  color: #ffffff;
+  font-size: 1.3rem;
+  font-weight: bold;
+  text-align: center;
+  // text-shadow: 1px 1px 2px #000;
+}
+

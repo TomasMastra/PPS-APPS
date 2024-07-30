@@ -1,0 +1,162 @@
+.contenedor-gral {
+    background: #383838;
+    min-height: 100vh;
+    //font-family: fantasy;
+    font-weight: lighter;
+    text-shadow: 2px 2px 4px #000;
+  }
+  
+  .contenedor-logo {
+    position: relative;
+    h1 {
+      color: #fff;
+      // font-size: 1.8rem;
+      position: absolute;
+      top: 65%;
+      left: 48%;
+      margin: -25px 0 0 -25px;
+      z-index: 1000;
+      font-family: fantasy;
+    }
+  }
+
+.auth-form {
+    width: 100%;
+    text-align: center;
+    // padding: 20px;
+}
+
+.custom-input {
+    --border-color: #e0e0e0;
+    --border-radius: 15px;
+    --border-style: solid;
+    --border-width: 1px;
+    width: 80%
+    // margin: 20px 0;
+    
+    ion-label {
+        position: relative;
+        bottom: 2px;
+    }
+    
+    .eye-icon {
+        position: relative;
+        top: 13px;
+    }
+}
+
+.error{
+    // height: 25px;
+    width: 82%;
+    background-color: rgb(221, 94, 153);
+    border-radius: 10px;
+    border: 1px solid red;
+    height: auto;
+    div{
+        color: white;
+        margin-left: 5px;
+    }
+}
+
+.logo{
+    width: 50%;
+    height: 50%;
+}
+
+ion-content{
+    --background: none;
+    background-color:#2b2a2a;
+   // background-image: url('../../../assets/bk/engranajes.png')!important;
+    // background-size: cover;
+}
+
+.slot{
+    margin: 10%;
+
+}
+
+.subslot{
+    margin-bottom: 30px;
+}
+.btnIngreso{
+    padding: 0;
+    margin: 0;
+    width: 80%;
+
+    background-color: #f8b729;
+    width: 225px;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto 1rem auto;
+    //box-shadow: 1px 1px 2px rgb(0, 0, 0);
+
+}
+
+.title{
+    padding: 8px;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    div{
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        align-items: center;
+        border-radius: 20px;
+        background-color: #53535363;
+
+        ion-title{
+            // color: #234191;
+            // -webkit-text-stroke: 0.1px #fff;
+            font-size: 40px;
+            font-weight: 800;
+            font-family: 'Ribeye', cursive;
+            overflow-wrap: break-word;
+        }
+    }
+}
+
+.btn-img{
+    height: 70px; 
+    width: 70px;
+    margin: 10px;
+}
+.btn-ingresar{
+    //background-color: #f8b729;
+    width: 225px;
+    height: 50px;
+    color: #fff;
+    border-radius: 10px;
+    display: block;
+    margin: 1rem auto 1rem auto;
+    //box-shadow: 1px 1px 2px rgb(0, 0, 0);
+    }
+
+
+@media (orientation: landscape) {
+    .aux{
+        padding: 16px;
+        margin: 0!important;
+    }
+    .btn{
+        margin: 0!important;
+    }
+    .btn-img{
+        height: 40px; 
+        width: 40px;
+    }
+}
+
+.line {
+    height: 3px;
+    width: 95%;
+    background-color: #e0e0e0;
+    margin-top: 10px;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    //box-shadow: 0px 2px 4px #000;
+  }

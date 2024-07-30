@@ -1,0 +1,67 @@
+ <body>
+  <section class="container forms">
+    <div class="form login">
+      <div class="form-content">
+        <header>
+          <img src="../assets/logo.png" alt="splash_screen">
+          <br>
+         <p style="font-family: monospace; color: #696969">Alarma de Robo</p> 
+        </header>
+
+        <ion-row class="ion-justify-content-center m-3">
+          <ion-item class="custom-input" lines="none">
+            <ion-icon color="primary" slot="start" name="mail-outline"></ion-icon>
+            <input 
+              type="email" 
+              autocomplete="email" 
+              label="Correo" 
+              formControlName='email' 
+              labelPlacement="floating"
+              placeholder="Email"
+              id="mail"
+              class="mail custom-input">
+          </ion-item>
+        </ion-row>
+
+        <ion-row class="ion-justify-content-center m-3">
+          <ion-item class="custom-input" lines="none">
+            <ion-icon color="primary" slot="start" name="lock-close-outline"></ion-icon>
+            <input 
+              type="password" 
+              autocomplete="password" 
+              label="Contraseña" 
+              formControlName='password' 
+              labelPlacement="floating"
+              placeholder="Contraseña"
+              id="contraseña"
+              class="contraseña custom-input">
+          </ion-item>
+        </ion-row>
+
+        <div class="field button-field">
+          <button (click)="iniciarSesion()">Iniciar sesión</button>
+        </div>
+      </div>
+
+      <div class="line"></div>
+
+      <div class="media-options">
+        <ion-img *ngIf="estado1" src="../../assets/apagar.png"></ion-img>
+        <ion-img *ngIf="!estado1" src="../../assets/encender.png" (click)="autoCompletar('admin@admin.com', '111111')"></ion-img>
+      
+        <ion-img src="../../assets/encender.png" (click)="autoCompletar('anonimo@anonimo.com', '111111')"></ion-img>
+      
+        <ion-img src="../../assets/encender.png" (click)="autoCompletar('usuario@usuario.com', '111111')"></ion-img>
+      </div>
+      <div class="media-options">
+        <p>  Admin</p>
+        <p>Anonimo</p>
+        <p>Usuario</p>
+
+      </div>
+      
+    </div>
+  </section>
+</body> 
+
+

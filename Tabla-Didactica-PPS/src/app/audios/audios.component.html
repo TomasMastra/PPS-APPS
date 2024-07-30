@@ -1,0 +1,51 @@
+<ion-fab vertical="bottom" horizontal="start" slot="fixed" style="border-radius: 50%;">
+  <ion-fab-button>
+    <ion-img class="icon-img main-img" [src]="selectedImgFlag" name="language"></ion-img>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/espana.png" (click)="selectImage('flag', 'Espania')"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/reino-unido.png" (click)="selectImage('flag', 'ReinoUnido')"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/portugal.png" (click)="selectImage('flag', 'Portugal')"></ion-img>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-fab vertical="bottom" horizontal="end" slot="fixed" style="border-radius: 50%;">
+  <ion-fab-button style="border-radius: 50%;">
+    <ion-img class="icon-img main-img" [src]="selectedImgTema" name="theme"></ion-img>
+  </ion-fab-button>
+  <ion-fab-list side="top">
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/colores.png" (click)="selectImage('tema', 'Color')"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/uno.png" (click)="selectImage('tema', 'Numero')"></ion-img>
+    </ion-fab-button>
+    <ion-fab-button style="border-radius: 50%;">
+      <ion-img class="icon-img" src="../../assets/elefante.png" (click)="selectImage('tema', 'Animal')"></ion-img>
+    </ion-fab-button>
+  </ion-fab-list>
+</ion-fab>
+
+<ion-fab vertical="top" horizontal="end" slot="fixed" style="border-radius: 50%;">
+  <ion-fab-button>
+    <ion-img class="icon-img main-img" src="../../assets/cerrar-sesion.png" (click)="goTo()" name="logout"></ion-img>
+  </ion-fab-button>
+</ion-fab>
+
+<ion-content [fullscreen]="true">
+  <div class="button-container">
+    @for(imagen of image; track imagen){
+      <button (click)="playAudio(audioFiles[$index])">{{ imagen }}</button>
+    }
+  </div>
+
+
+
+
+</ion-content>

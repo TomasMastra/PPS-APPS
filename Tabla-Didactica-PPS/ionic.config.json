@@ -1,0 +1,7 @@
+{
+  "name": "Tabla-Didactica-PPS",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

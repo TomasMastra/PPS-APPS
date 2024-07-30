@@ -1,0 +1,98 @@
+<ion-header>
+  <ion-toolbar class="toolbar-container">
+    <ion-title class="toolbar-title upper" style="font-family: monospace;   text-align: center;
+">Control de Gastos</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content noscroll>
+  <ion-grid>
+    <ion-row>
+      <ion-col>
+        <img
+          class="mx-auto h-30 w-10"
+          style="
+            width: 10rem;
+            border-radius: 50%;
+            margin-top: 1rem;
+            margin-bottom: 2rem;
+          "
+          src="../../assets/dolar.png"
+          alt="Simbolo de dinero"
+        />
+        <h2
+          class="mt-2 text-center text-2xl font-bold tracking-tight text-gray-900"
+          style="
+            text-align: center;
+            color: #fff;
+            background: rgba(0, 0, 0, 0.15);
+            border-radius: 12px;
+          "
+        >
+          Ingresa tu sueldo y porcentaje de gastos esperados
+        </h2>
+        <p class="mb-3 text-center text-sm text-gray-600">
+          <ion-icon name="information-circle-outline"></ion-icon> el porcentaje
+          de gastos es en relación con tus ingresos
+        </p>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="custom-input"style="  border: 2px solid white;
+">
+          <ion-label position="floating">Sueldo ($)</ion-label>
+          <ion-input
+            type="number"
+            id="salary"
+            name="sueldo"
+            pattern="[0-9]*"
+            [(ngModel)]="salary"
+            [ngModelOptions]="{standalone: true}"
+            required
+            placeholder="$ Sueldo"
+          ></ion-input>
+        </ion-item>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <ion-item class="custom-input" style="  border: 2px solid white;
+">
+          <ion-label position="floating">Porcentaje (%)</ion-label>
+          <ion-input
+            type="number"
+            id="percentage"
+            name="percentage"
+            pattern="[0-9]*"
+            [(ngModel)]="percentage"
+            [ngModelOptions]="{standalone: true}"
+            required
+            placeholder="% Porcentaje"
+          ></ion-input>
+        </ion-item>
+        <div>
+          <div class="text-sm">
+            <p class="mt-2 mb-4 text-center text-sm text-gray-600">
+              <ion-icon name="information-circle-outline"></ion-icon> El
+              porcentaje debe ser mayor a 0 y menor a 100.
+            </p>
+          </div>
+        </div>
+      </ion-col>
+    </ion-row>
+    <ion-row>
+      <ion-col>
+        <div>
+          <button
+            (click)="createControl()"
+            type="submit"
+            class="group relative flex w-full justify-center rounded-md bg-red-600 py-2 px-4 text-sm font-medium text-white no-border-button"
+          >
+            Comenzar
+          </button>
+        </div>
+      </ion-col>
+    </ion-row>
+  </ion-grid>
+</ion-content>
