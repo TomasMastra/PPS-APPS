@@ -1,5 +1,5 @@
 import { CommonModule } from '@angular/common';
-import { Component, Input, OnInit, inject } from '@angular/core';
+import { Component, Input, inject } from '@angular/core';
 import { ReactiveFormsModule } from '@angular/forms';
 import { Router } from '@angular/router';
 import { EChartsOption } from 'echarts';
@@ -20,12 +20,14 @@ import Swal from 'sweetalert2';
     provideEcharts(),
   ]
 })
-export class PieGraphicComponent implements OnInit {
+export class PieGraphicComponent   {
   theme!: string | ThemeOption;
   private router:Router = inject(Router);
   private storeServ:StoreService = inject(StoreService);
   options!: EChartsOption;
   private data!:FotosModel[];
+  initOpts!:any;
+
 
   constructor() { }
 
@@ -43,7 +45,7 @@ export class PieGraphicComponent implements OnInit {
     if (clickedItem) {
       await Swal.fire({
         title: clickedItem.user + ' - ' + this.formatDate(clickedItem.date),
-        text:'Me gustas: ' + (clickedItem.likes.length-1) + ' / ' + 'No me gustas: ' + (clickedItem.dislikes.length -1),
+        text:'Me gustas: ' + (clickedItem.likes.length-1),
         imageUrl: clickedItem.url,
         imageWidth: 'auto',
         imageHeight: 'auto',
@@ -62,20 +64,29 @@ export class PieGraphicComponent implements OnInit {
         value: foto.likes.length + foto.dislikes.length - 2,
       })) ?? [];
 
+
+      this.initOpts = {
+        renderer: 'svg',
+        width: 400,
+        height: 400,
+      };
+      
       this.options = {
+        
         title: {
           left: '50%',
           text: 'Fotos lindas',
-          subtext: 'Votos (positivos y negativos) por foto',
           textAlign: 'center',
+          top: 5,
         },
         tooltip: {
           trigger: 'item',
           formatter: '{a} <br/>{b} : {c} ({d}%)',
         },
         legend: {
-          align: 'auto',
-          bottom: 2,
+          orient: 'horizontal',  // Cambia la orientación si es necesario
+          bottom: '20%',         // Ajusta la distancia desde la parte inferior (ajusta el porcentaje según sea necesario)
+          itemGap: 5,           // Espaciado entre los elementos de la leyenda
           data: chartData.map(item => item.name),
         },
         calculable: true,
@@ -84,11 +95,13 @@ export class PieGraphicComponent implements OnInit {
             name: 'Votos',
             type: 'pie',
             radius: [30, 110],
+            center: ['50%', '40%'],  // Mueve el gráfico más arriba (en el 40% de la altura)
             roseType: 'area',
             data: chartData,
           },
         ],
       };
+      
     });
   }
 }

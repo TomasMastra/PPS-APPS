@@ -1,5 +1,5 @@
 import { Injectable, inject } from '@angular/core';
-import { CollectionReference, Firestore, addDoc, collection, collectionData, doc, orderBy, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
+import { CollectionReference, Firestore, deleteDoc, addDoc, collection, collectionData, doc, orderBy, query, setDoc, updateDoc, where } from '@angular/fire/firestore';
 import { Observable, map, switchMap, take } from 'rxjs';
 import { UserModel } from '../models/user';
 import { FotosModel } from '../models/fotos';
@@ -44,6 +44,16 @@ export class StoreService {
     return collectionData(qry).pipe( map(fotos => fotos.map(foto => foto as FotosModel)));    
     // return collectionData(qry) as Observable<FotosModel[]>;    
   }
+
+  delete(foto: FotosModel): Promise<void> {
+    const registro = doc(this.relevamientos, foto.refId!);  // Asegúrate de usar refId o el campo adecuado
+    return deleteDoc(registro);
+  }
+  
+  
+
+
+    
 
   guardarFoto(foto:FotosModel){
     const row = doc(this.relevamientos);
@@ -91,5 +101,8 @@ export class StoreService {
       error: (error) => console.error('Error al actualizar el voto:', error)
     });
   }
+
+
+    
 
 }

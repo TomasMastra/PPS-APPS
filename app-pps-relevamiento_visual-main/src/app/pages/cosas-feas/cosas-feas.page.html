@@ -28,16 +28,10 @@
                 <ion-text>
                   <h5 class="votos-positivos">Votos positivos: {{item.likes.length -1}}</h5>
                 </ion-text>
-                <ion-text>
-                  <h5 class="votos-negativos">Votos negativos: {{item.dislikes.length -1}}</h5>
-                </ion-text>
               </div>
               <div class="card-btn">
                 <ion-button color="success" expand="block" shape="round" (click)="votar(item.refId, 'like')">
                   Me gusta
-                </ion-button>
-                <ion-button color="danger"  expand="block"  shape="round" (click)="votar(item.refId, 'dislike')">
-                  No me gusta
                 </ion-button>
               </div>
             </ion-card-content>

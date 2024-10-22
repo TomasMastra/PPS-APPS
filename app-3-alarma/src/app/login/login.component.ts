@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common'; // Importa CommonModule
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonicSlides, IonRow, IonCol, IonButton, IonToast, IonIcon, IonItem, IonInput, IonImg } from '@ionic/angular/standalone';
 import { NavController } from '@ionic/angular';
@@ -23,7 +23,7 @@ import {
     CommonModule, CommonModule
     ]
 })
-export class LoginComponent  implements OnInit {
+export class LoginComponent   {
 
   public nombre:string;
   public mail:string;
@@ -31,6 +31,14 @@ export class LoginComponent  implements OnInit {
   public estado1: boolean = false;
   public estado2: boolean = false;
   public estado3: boolean = false;
+
+  imagen1: string = '../../assets/encender.png';
+  imagen2: string = '../../assets/encender.png';
+  imagen3: string = '../../assets/encender.png';
+
+  click = "../../assets/click.mp3";
+  audio = new Audio();
+
 
   constructor(public navCtrl: NavController, private afAuth: AngularFireAuth, private router: Router, private firestore: AngularFirestore) {
     this.nombre = "";
@@ -53,6 +61,9 @@ export class LoginComponent  implements OnInit {
   
     const mail = mailInput.value.trim(); 
     const password = passwordInput.value.trim();
+
+    /*this.audio.src = this.click;   
+    this.audio.play();*/
   
     try {
       //const result = await this.afAuth.signInWithEmailAndPassword(mail, password);
@@ -84,6 +95,56 @@ export class LoginComponent  implements OnInit {
       this.estado1 = false;
 
     }
+  }
+
+  cambiarImagen(imagen: number) {
+
+    switch(imagen){
+      case 1:
+        if (this.imagen1 === '../../assets/encender.png') {
+          this.imagen1 = '../../assets/apagar.png';
+          this.imagen2 = '../../assets/encender.png';
+          this.imagen3 = '../../assets/encender.png';
+          this.audio.src = this.click;   
+          this.audio.play();
+        } else {
+          this.imagen1 = '../../assets/encender.png';
+
+          this.audio.src = this.click;   
+          this.audio.play();
+        }
+      break;
+
+      case 2:
+        if (this.imagen2 === '../../assets/encender.png') {
+          this.imagen2 = '../../assets/apagar.png';
+          this.imagen1 = '../../assets/encender.png';
+          this.imagen3 = '../../assets/encender.png';
+
+        this.audio.src = this.click;   
+        this.audio.play();
+        } else {
+          this.imagen2 = '../../assets/encender.png';
+          this.audio.src = this.click;   
+          this.audio.play();
+        }
+      break;
+
+      case 3:
+        if (this.imagen3 === '../../assets/encender.png') {
+          this.imagen3 = '../../assets/apagar.png';
+          this.imagen1 = '../../assets/encender.png';
+          this.imagen2 = '../../assets/encender.png';
+          this.audio.src = this.click;   
+          this.audio.play();
+        } else {
+          this.imagen3 = '../../assets/encender.png';
+          this.audio.src = this.click;   
+          this.audio.play();
+        }
+      break;
+    }
+
   }
   
 

@@ -122,7 +122,7 @@
 //HERRAMIENTAS
 
 .contenedor-cartas-herramienta{
-  padding: 8px;
+  padding: 5px;
   height: 100%;
   width: 100% !important;
   display: flex;
@@ -131,34 +131,23 @@
   justify-content: center;
 }
 
-.carta-herramienta{
-  height: 150px !important;
-  width: 45%;
+.carta-herramienta {
+  height: 110px !important; /* Reducir un poco más la altura */
+  width: 40%; /* Mantener el ancho para que quepan más cartas en la pantalla */
   display: flex;
   justify-content: center;
   align-items: center;    
   flex-direction: column;
   background-color: transparent;
-  margin: 0 7px 0 7px;
-  // margin: 0 15px 0 15px;
-  .back{
-      img{
-          height: 50px;
-      }
-  }
-  
-  // box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-  // margin-top: 150px;
-  
+  margin: 10px 5px; /* Reducir márgenes para ahorrar espacio */
 }
+
 .flip-container-herramienta {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
-  
-  // margin-bottom: 15px;
 }
 
 .flipper-herramienta {
@@ -166,26 +155,23 @@
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
- 
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .front-herramienta,
 .back-herramienta {
   width: 100%;
-  height: 140px;
+  height: 110px; /* Ajustar la altura de la carta */
   position: absolute;
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
   
-      
-  img{
-      height: 60%;
+  img {
+    height: 45%; /* Ajustar el tamaño de las imágenes dentro de las cartas */
   }
   transform-style: preserve-3d;
 }
@@ -203,7 +189,7 @@
 
 //FRUTAS
 
-.contenedor-cartas-fruta{
+.contenedor-cartas-fruta {
   padding: 5px;
   height: 100%;
   width: 100% !important;
@@ -213,31 +199,23 @@
   justify-content: center;
 }
 
-.carta-fruta{
-  height: 100px !important;
-  width: 45%;
+.carta-fruta {
+  height: 70px !important; /* Altura ajustada */
+  width: 40%; /* Ancho manteniendo para una buena disposición */
   display: flex;
   justify-content: center;
-  align-items: center;    
+  align-items: center;
   flex-direction: column;
   background-color: transparent;
-  margin: 0 7px 0 7px;
-  // margin: 0 15px 0 15px;
-  .back{
-      img{
-          height: 50px;
-      }
-  }
-  
+  margin: 5px; /* Márgenes */
 }
+
 .flip-container-fruta {
   width: 100%;
   height: 100%;
   position: relative;
   transform-style: preserve-3d;
   transition: transform 0.6s;
-  
-  // margin-bottom: 15px;
 }
 
 .flipper-fruta {
@@ -245,32 +223,29 @@
   height: 100%;
   position: absolute;
   transform-style: preserve-3d;
- 
   display: flex;
   justify-content: center;
   align-items: center;
-  
 }
 
 .front-fruta,
 .back-fruta {
-  width: 80%;
-  height: 90px;
+  width: 100%;
+  height: 70px; /* Altura de la carta ajustada */
   position: absolute;
   backface-visibility: hidden;
   display: flex;
   justify-content: center;
   align-items: center;
-  
-      
-  img{
-      height: 80%;
+
+  img {
+    height: 60%; /* Tamaño de las imágenes ajustado */
   }
   transform-style: preserve-3d;
 }
 
 .front-fruta {
-  background-color:#1296e2;
+  background-color: #1296e2;
   border-radius: 10px;
 }
 

@@ -224,5 +224,8 @@ export class AlarmButtonComponent implements OnInit {
     Haptics.vibrate({duration: 5000});    
   }
 
-  ngOnInit(): void { }
+  ngOnInit(): void { 
+
+    //this.onoff();
+  }
 }

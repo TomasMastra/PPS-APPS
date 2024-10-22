@@ -10,8 +10,27 @@
   </ion-toolbar>
 </ion-header>
 
+  
+<ion-buttons class="button-container">
+  <ion-button *ngIf="estadoFacil == true" (click)="cambiarEstado('facil')" class="boton-dificultad">Fácil</ion-button>
+  <ion-button *ngIf="estadoFacil == false" (click)="cambiarEstado('facil')" class="boton-dificultad-false">Fácil</ion-button>
+
+  <ion-button *ngIf="estadoMedio == true" (click)="cambiarEstado('medio')" class="boton-dificultad">Medio</ion-button>
+  <ion-button *ngIf="estadoMedio == false" (click)="cambiarEstado('medio')" class="boton-dificultad-false">Medio</ion-button>
+
+  <ion-button *ngIf="estadoDificil == true" (click)="cambiarEstado('dificil')" class="boton-dificultad">Difícil</ion-button>
+  <ion-button *ngIf="estadoDificil == false" (click)="cambiarEstado('dificil')" class="boton-dificultad-false">Difícil</ion-button>
+</ion-buttons>
+
+
+
+
+
 <ion-content [fullscreen]="true">
-  <div class="bk">
+
+
+
+  <div class="bk" *ngIf="estadoFacil == true">
     <ion-list>
       <ion-title>TOP 5 - Fácil</ion-title>
       <ng-container *ngFor="let item; let i = index of scoresFacil">
@@ -27,7 +46,8 @@
       </ng-container>
     </ion-list>
   </div>
-  <div class="bk">
+
+  <div class="bk" *ngIf="estadoMedio == true">
     <ion-list>
       <ion-title>TOP 5 - Medio</ion-title>
       <ng-container *ngFor="let item; let i = index of scoresMedio">
@@ -43,7 +63,7 @@
       </ng-container>
     </ion-list>
   </div>
-  <div class="bk">
+  <div class="bk" *ngIf="estadoDificil == true">
     <ion-list>
       <ion-title>TOP 5 - Difícil</ion-title>
       <ng-container *ngFor="let item; let i = index of scoresDificil">

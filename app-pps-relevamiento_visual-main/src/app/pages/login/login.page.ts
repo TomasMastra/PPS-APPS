@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormControl, FormGroup, FormsModule, ReactiveFormsModule, Validators } from '@angular/forms';
 import { IonContent, IonHeader, IonIcon, IonTitle, IonToolbar, IonRow, IonCol, IonItem, IonFabButton, IonImg, IonButton, IonFabList, IonFab, IonButtons, IonMenu, IonMenuButton, IonInput, IonList, IonLabel, IonAvatar, IonToggle, IonMenuToggle, IonText, IonToast } from '@ionic/angular/standalone';
@@ -15,10 +15,8 @@ import { ToastController } from '@ionic/angular';
   standalone: true,
   imports: [IonToast, IonText, IonToggle, IonAvatar, IonLabel, IonIcon, IonList, IonInput, IonButtons, IonFab, IonFabList, IonButton, IonImg, IonFabButton, IonMenu, IonItem, IonCol, IonRow, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule, IonMenuButton, ReactiveFormsModule, IonMenuToggle]
 })
-export class LoginPage implements OnInit {
-  private authServ:AuthService = inject(AuthService);
-  private router:Router = inject(Router);
-  private toast:ToastController = inject(ToastController);
+export class LoginPage  {
+
 
   isToastOpen = false;
   error:string = '';
@@ -34,8 +32,11 @@ export class LoginPage implements OnInit {
   });
 
 
-  constructor() { }
-
+  constructor(
+    private authServ: AuthService, 
+    private router: Router, 
+    private toast: ToastController
+  ) { }
   async ingresar(){
     if(this.form.valid){
       let email: string = this.form.get('email')!.value;

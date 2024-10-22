@@ -16,3 +16,39 @@ ion-content{
     border-radius: 20px;
 }
 
+.button-container {
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    width: 100%;
+  }
+  
+
+
+  .button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center; /* Centra los botones horizontalmente */
+    width: 100%;
+}
+
+.boton-dificultad {
+    background-color: #fed15a; /* Color amarillo */
+    color: #000; /* Color del texto */
+    margin: 0 5px; /* Espaciado entre los botones */
+    border-radius: 5px;
+    padding: 10px 20px; /* Reduce el tamaño de los botones */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+}
+
+.boton-dificultad-false {
+    background-color: #5aaffe; /* Color amarillo */
+    color: #000; /* Color del texto */
+    margin: 0 5px; /* Espaciado entre los botones */
+    border-radius: 5px;
+    padding: 10px 20px; /* Reduce el tamaño de los botones */
+    font-size: 1rem; /* Ajusta el tamaño del texto */
+}
+
+
+  
+

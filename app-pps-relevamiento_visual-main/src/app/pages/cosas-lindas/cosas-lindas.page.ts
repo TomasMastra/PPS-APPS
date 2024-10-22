@@ -1,4 +1,4 @@
-import { Component, OnInit, inject } from '@angular/core';
+import { Component } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { IonContent, IonHeader, IonTitle, IonToolbar, IonCard, IonFab, IonImg, IonFabButton, IonCardTitle, IonCardSubtitle, IonCardHeader, IonCardContent, IonButton, IonGrid, IonCol, IonRow, IonLabel, IonItem, IonText, IonFooter, IonButtons } from '@ionic/angular/standalone';
@@ -18,16 +18,18 @@ type Voto = 'like' | 'dislike';
   standalone: true,
   imports: [IonButtons, IonFooter, IonText, IonItem, IonLabel, IonRow, IonCol, IonGrid, IonButton, IonCardContent, IonCardHeader, IonCardSubtitle, IonCardTitle, IonFabButton, IonImg, IonFab, IonCard, IonContent, IonHeader, IonTitle, IonToolbar, FormsModule, CommonModule]
 })
-export class CosasLindasPage implements OnInit {
-  private storeServ:StoreService = inject(StoreService);
-  private storage:Storage = inject(Storage); 
-  private authServ:AuthService = inject(AuthService);
-  private router:Router = inject(Router);
+export class CosasLindasPage  {
+
 
   fotosLindas!: FotosModel[];
 
-  constructor() { }
-
+  constructor(
+    private storeServ: StoreService, 
+    private storage: Storage, 
+    private authServ: AuthService, 
+    private router: Router
+  ) { }
+  
   async tomarFoto(){
     const image = await Camera.getPhoto({
       quality: 80,
@@ -96,5 +98,7 @@ export class CosasLindasPage implements OnInit {
       this.fotosLindas = data;
     });
   }
+
+
 
 }

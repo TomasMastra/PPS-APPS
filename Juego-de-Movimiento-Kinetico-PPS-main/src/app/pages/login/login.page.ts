@@ -19,6 +19,7 @@ export class LoginPage implements OnInit {
   ngOnInit() {
     this.auth.getUserLogged().subscribe((res) => {
       if (res !== null) {
+        // Aquí puedes manejar si ya hay un usuario logueado
       }
     });
   }
@@ -29,45 +30,32 @@ export class LoginPage implements OnInit {
     } else {
       this.auth.toast('¡Por favor completa todos los campos!', 'warning');
     }
-  } // end of loginUser
+  }
 
-  loadFastUser(numUser: number) {
-    const admin = <HTMLInputElement>document.getElementById('admin');
-    const usuario = <HTMLInputElement>document.getElementById('usuario');
-    const invitado = <HTMLInputElement>document.getElementById('invitado');
-    switch (numUser) {
-      case 1:
-        usuario.checked = false;
-        invitado.checked = false;
+  cargarUsuario(user: string) {
+
+
+    this.email = 'admin@admin.com';
+    this.password = '111111';
+    switch (user) {
+      case 'admin':
         this.email = 'admin@admin.com';
         this.password = '111111';
-        
-        this.admin = true;
-        this.usuario = false;
-        this.invitado = false;
         break;
-      case 2:
-        usuario.checked = false;
-        admin.checked = false;
-        this.email = 'invitado@invitado.com';
+      case 'tester':
+        this.email = 'tester@tester.com';
         this.password = '222222';
-
-        this.admin = false;
-        this.usuario = false;
-        this.invitado = true;
         break;
-      case 3:
-        admin.checked = false;
-        invitado.checked = false;
+      case 'usuario':
         this.email = 'usuario@usuario.com';
         this.password = '333333';
-
-        this.admin = false;
-        this.usuario = true;
-        this.invitado = false;
+        break;
+      case 'invitado':
+        this.email = 'invitado@invitado.com';
+        this.password = '444444';
         break;
       default:
         break;
     }
-  } // end of loadFastUser
+  }
 }

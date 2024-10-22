@@ -1,7 +1,7 @@
 import { Component, OnInit, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
-import { IonContent, IonHeader, IonTitle, IonToolbar, IonImg, IonButtons, IonItem, IonLabel, IonList } from '@ionic/angular/standalone';
+import { IonContent, IonHeader, IonTitle, IonButton, IonToolbar, IonImg, IonButtons, IonItem, IonLabel, IonList } from '@ionic/angular/standalone';
 import { AuthService } from 'src/app/services/auth.service';
 import { Router } from '@angular/router';
 import { StoreService } from 'src/app/services/store.service';
@@ -12,7 +12,7 @@ import { ScoreModel } from 'src/app/models/score';
   templateUrl: './ranking.page.html',
   styleUrls: ['./ranking.page.scss'],
   standalone: true,
-  imports: [IonList, IonLabel, IonItem, IonButtons, IonImg, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
+  imports: [IonList, IonLabel, IonButton, IonItem, IonButtons, IonImg, IonContent, IonHeader, IonTitle, IonToolbar, CommonModule, FormsModule]
 })
 export class RankingPage implements OnInit {
   private authServ:AuthService = inject(AuthService);
@@ -22,6 +22,10 @@ export class RankingPage implements OnInit {
   scoresFacil: ScoreModel[] = [];
   scoresMedio: ScoreModel[] = [];
   scoresDificil: ScoreModel[] = [];
+
+  estadoFacil: boolean = true;
+  estadoMedio: boolean = false;
+  estadoDificil: boolean = false;
   
   constructor() { }
   
@@ -44,4 +48,31 @@ export class RankingPage implements OnInit {
       this.scoresDificil = data
     });
   }
+
+  cambiarEstado(nivel: string) {
+    switch(nivel) {
+        case 'facil':
+            this.estadoFacil = true;
+            this.estadoMedio = false;
+            this.estadoDificil = false;
+            break;
+
+        case 'medio':
+            this.estadoFacil = false;
+            this.estadoMedio = true;
+            this.estadoDificil = false;
+            break;
+
+        case 'dificil':
+            this.estadoFacil = false;
+            this.estadoMedio = false;
+            this.estadoDificil = true;
+            break;
+
+        default:
+            // Manejo de caso por defecto si es necesario
+            break;
+    }
+}
+
 }

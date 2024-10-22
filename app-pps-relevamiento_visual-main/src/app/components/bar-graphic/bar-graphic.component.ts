@@ -44,7 +44,7 @@ export class BarGraphicComponent  implements OnInit {
     if (clickedItem) {
       await Swal.fire({
         title: clickedItem.user + ' - ' + this.formatDate(clickedItem.date),
-        text:'Me gustas: ' + (clickedItem.likes.length-1) + ' / ' + 'No me gustas: ' + (clickedItem.dislikes.length -1),
+        text:'Me gustas: ' + (clickedItem.likes.length-1),
         imageUrl: clickedItem.url,
         imageWidth: 'auto',
         imageHeight: 'auto',
@@ -66,8 +66,8 @@ export class BarGraphicComponent  implements OnInit {
 
       this.initOpts = {
         renderer: 'svg',
-        width: 300,
-        height: 300,
+        width: 250,
+        height: 250,
       };
       
       this.options = {
@@ -101,7 +101,6 @@ export class BarGraphicComponent  implements OnInit {
         title: {
           left: '50%',
           text: 'Fotos feas',
-          subtext: 'Votos (positivos y negativos) por foto',
           textAlign: 'center',
         },
         legend: {

@@ -6,9 +6,8 @@ import { UserModel } from '../models/user';
   providedIn: 'root'
 })
 export class AuthService {
-  private auth:Auth = inject(Auth);
   currentUser:UserModel | null = null; 
-  constructor() { }
+  constructor(private auth: Auth) {}
 
   async loginUser(email: string, password: string){
     try {

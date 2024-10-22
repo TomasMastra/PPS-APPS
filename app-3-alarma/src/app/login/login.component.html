@@ -17,7 +17,7 @@
               label="Correo" 
               formControlName='email' 
               labelPlacement="floating"
-              placeholder="Email"
+              placeholder="Correo"
               id="mail"
               class="mail custom-input">
           </ion-item>
@@ -46,12 +46,16 @@
       <div class="line"></div>
 
       <div class="media-options">
-        <ion-img *ngIf="estado1" src="../../assets/apagar.png"></ion-img>
-        <ion-img *ngIf="!estado1" src="../../assets/encender.png" (click)="autoCompletar('admin@admin.com', '111111')"></ion-img>
+     <!--   <ion-img *ngIf="estado1" src="../../assets/apagar.png"></ion-img>
+        <ion-img *ngIf="!estado1" src="../../assets/encender.png" (click)="autoCompletar('admin@admin.com', '111111')"></ion-img> -->
+
+        <ion-img [src]="imagen1" (click)="autoCompletar('admin@admin.com', '111111'); cambiarImagen(1)"></ion-img>
+
       
-        <ion-img src="../../assets/encender.png" (click)="autoCompletar('anonimo@anonimo.com', '111111')"></ion-img>
-      
-        <ion-img src="../../assets/encender.png" (click)="autoCompletar('usuario@usuario.com', '111111')"></ion-img>
+        <ion-img [src]="imagen2" (click)="autoCompletar('anonimo@anonimo.com', '111111'); cambiarImagen(2)"></ion-img>
+
+        <ion-img [src]="imagen3" (click)="autoCompletar('usuario@usuario.com', '111111'); cambiarImagen(3)"></ion-img>
+        
       </div>
       <div class="media-options">
         <p>  Admin</p>

@@ -1,30 +1,64 @@
-<ion-header>
-  <ion-title style="text-align: center; font-family: monospace; background:   #1f1f1f; color: #ffffff; padding: 10px 0"
-    >Juego de Movimiento Kinético</ion-title
-  >
-</ion-header>
+<div class="ion-page" id="main-content">
+  <ion-header>
+    <ion-toolbar>
 
+      <ion-title class="title" style="font-family: monospace; color:aliceblue">Iniciar sesión</ion-title>
+      <ion-buttons slot="end">
+        
+        <ion-menu-button></ion-menu-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-header>
 
+  <ion-menu side="end" contentId="main-content">
+    <ion-header>
+      <ion-toolbar (click)="cargarUsuario('admin')">
+        <ion-title style="font-family: monospace">Inicio Rápido</ion-title>
+      </ion-toolbar>
+    </ion-header>
+    <ion-content class="ion-padding" (click)="cargarUsuario('admin')">
+      <ion-list (click)="cargarUsuario('admin')">
+        <ion-item (click)="cargarUsuario('admin')">
+          <ion-avatar (click)="cargarUsuario('admin')" aria-hidden="true" slot="start">
+            <img alt="" src="../../../assets/icon/rey.png" />
+          </ion-avatar>
+          <ion-label>Admin</ion-label>
+        </ion-item>
+        <ion-item (click)="cargarUsuario('tester')">
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="../../../assets/icon/administracion.png" />
+          </ion-avatar>
+          <ion-label>Tester</ion-label>
+        </ion-item>
+        <ion-item (click)="cargarUsuario('usuario')">
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="../../../assets/icon/persona-de-libre-dedicacion.png" />
+          </ion-avatar>
+          <ion-label>Usuario</ion-label>
+        </ion-item>
+        <ion-item (click)="cargarUsuario('invitado')">
+          <ion-avatar aria-hidden="true" slot="start">
+            <img alt="" src="../../../assets/icon/invitado.png" /> <!-- Asegúrate de tener esta imagen -->
+          </ion-avatar>
+          <ion-label>Invitado</ion-label>
+        </ion-item>
+      </ion-list>
+    </ion-content>
+  </ion-menu>
 
 <ion-content no-scroll>
   <div class="container-fluid mx-auto contenedor-gral">
     <div class="contenedor-logo">
       <img
-        style="
-          width: 10rem;
-          display: block;
-          margin-left: auto;
-          margin-right: auto;
-          margin-top: 1rem;
-        "
+        style="width: 10rem; display: block; margin-left: auto; margin-right: auto; margin-top: 1rem;"
         src="../../../assets/juegokinetico-png.png"
         alt="logo"
       />
     </div>
     <div class="row" style="padding-left: 20px; padding-right: 20px; color: #fff;">
-      <label class="mb-1"
-        ><h6 class="mb-0 text-sm" style="font-family: fantasy;">Dirección de Correo</h6></label
-      >
+      <label class="mb-1">
+        <h6 class="mb-0 text-sm" style="font-family: fantasy;">Dirección de Correo</h6>
+      </label>
       <input
         [(ngModel)]="email"
         placeholder="Dirección de Correo"
@@ -35,12 +69,14 @@
       />
     </div>
     <div class="row" style="padding-left: 20px; padding-right: 20px; color: #fff">
-      <label><h6 class="text-sm" style="font-family: fantasy;">Contraseña</h6></label>
+      <label>
+        <h6 class="text-sm" style="font-family: fantasy;">Contraseña</h6>
+      </label>
       <input
         [(ngModel)]="password"
         placeholder="Contraseña"
         class="input"
-        name="email"
+        name="contraseña"
         type="password"
         style="border-color: #fff;"
       />
@@ -55,38 +91,5 @@
       </button>
     </div>
 
-    <h6 class="mb-3 mr-4 mt-3 text-center" style="color: #fff">
-      Ingreso rápido
-    </h6>
-    <div
-      style="
-        display: flex;
-        justify-content: center;
-        align-content: center;
-        color: #fff;
-      "
-    >
-      <div style="display: flex; justify-content: center">
-        <label class="switch">
-          <input type="checkbox" id="admin" (click)="loadFastUser(1)" />
-          <span class="slider"></span>
-        </label>
-        <p style="margin-right: 5px; margin-left: 5px">Admin</p>
-      </div>
-      <div style="display: flex; justify-content: center">
-        <label class="switch">
-          <input type="checkbox" id="usuario" (click)="loadFastUser(3)" />
-          <span class="slider"></span>
-        </label>
-        <p style="margin-right: 5px; margin-left: 5px">Usuario</p>
-      </div>
-      <div style="display: flex; justify-content: center">
-        <label class="switch">
-          <input type="checkbox" id="invitado" (click)="loadFastUser(2)" />
-          <span class="slider"></span>
-        </label>
-        <p style="margin-right: 5px; margin-left: 5px">Invitado</p>
-      </div>
-    </div>
-  </div></ion-content
->
+
+

@@ -22,6 +22,8 @@ export class SplashScreenPage implements OnInit {
   }
 
   ngOnInit() {
+    this.router.navigateByUrl('/login');
+
   }
   ngAfterViewInit(): void {
     setTimeout(() => {

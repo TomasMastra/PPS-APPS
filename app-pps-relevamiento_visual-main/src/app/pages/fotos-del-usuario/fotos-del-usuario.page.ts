@@ -49,11 +49,24 @@ export class FotosDelUsuarioPage implements OnInit {
     this.authServ.singOutUser().then(() => this.router.navigateByUrl('/login'));
    }
 
-  ngOnInit() {
+   ngOnInit() {
     // debugger;
     this.storeServ.traerFotosPorUsuario(this.authServ.usuarioActivo!.email).subscribe( (data) => {
       // console.log(data);
       this.misFotos = data;
     });
   }
+  
+  /*
+  borrarTodasLasFotos(fotos: FotosModel[]) {
+    fotos.forEach(foto => {
+      this.storeServ.delete(foto).then(() => {
+        console.log(`Foto con ID ${foto.refId} eliminada correctamente`);
+      }).catch(error => {
+        console.error(`Error al eliminar la foto con ID ${foto.refId}: `, error);
+      });
+    });
+  }*/
+  
+
 }
